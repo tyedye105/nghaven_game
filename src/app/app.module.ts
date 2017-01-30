@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { Player } from './player.model';
+
 @NgModule({
   declarations: [
     AppComponent
