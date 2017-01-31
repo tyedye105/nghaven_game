@@ -20,10 +20,35 @@ export class HealComponent implements OnInit {
   healEvents(randomNumber) {
     switch(randomNumber) {
       case 1:
-        this.playerService.increaseDaysRemaining(1);
+        this.playerService.decreaseCrystals(10);
+        break;
+      case 2:
+        this.playerService.decreaseCrystals(20);
+        break;
+      case 3:
+        this.playerService.decreaseCrystals(30);
+        break;
+      case 4:
+        this.playerService.increaseHp(20);
+        break;
+      case 5:
+        this.playerService.increaseHp(30);
+        break;
+      case 6:
+        this.playerService.increaseHp(40);
+        break;
+      case 7:
+        this.playerService.increaseHp(50);
+        break;
+      case 8:
+        this.playerService.resetHp();
         break;
       }
     }
 
-
+    healFunction() {
+      // var randomNumber = Math.floor(Math.random() * 5) + 1;
+      this.healEvents(7);
+      console.log(this.playerService.newPlayer)
+    }
 }
