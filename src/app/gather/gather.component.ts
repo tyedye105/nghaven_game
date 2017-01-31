@@ -63,7 +63,10 @@ export class GatherComponent {
     this.playerService.increaseCrystals(this.playerService.getPlayer().gathering * 20);
     //decrease days remaining by 1
     this.playerService.decreaseDaysRemaining(1);
-
+    //if HP is greater than Max Hp, hp becomes Max Hp
+    if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
+      this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
+    }
     console.log(this.playerService.getPlayer())
   }
 

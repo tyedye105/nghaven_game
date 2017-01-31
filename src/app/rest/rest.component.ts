@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -10,12 +10,9 @@ import { PlayerService } from '../player.service';
 })
 
 
-export class RestComponent implements OnInit {
+export class RestComponent {
 
   constructor(private playerService: PlayerService) { }
-
-  ngOnInit() {
-  }
 
   restEvents(randomNumber) {
     switch(randomNumber) {
@@ -40,9 +37,28 @@ export class RestComponent implements OnInit {
       }
     }
     restFunction() {
-      var randomNumber = Math.floor(Math.random() * 6) + 1;
-      this.restEvents(randomNumber);
-      console.log(this.playerService.getPlayer())
-    }
+      if (this.playerService.getPlayer().crystals >= 10) {
+        var chanceOfEvent = Math.floor(Math.random() * 10) + 1
+        var randomNumber = Math.floor(Math.random() * 6) + 1;
+        //event
+        if (chanceOfEvent <= 1) {
+          this.restEvents(randomNumber);
+          console.log("event happened")
+        }
+        //spend crystals to rest
+        this.playerService.decreaseCrystals(10);
+        //decrease day remaining by 1
+        this.playerService.decreaseDaysRemaining(1);
+        //increase HP by healing * 20
+        this.playerService.increaseHp(this.playerService.getPlayer().healing * 20);
+        //if HP is greater than Max Hp, hp becomes Max Hp
+        if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
+          this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
+        }
 
-  }
+        console.log(this.playerService.getPlayer())
+      } else {
+        alert("You don't have enough crystals to rest");
+      }
+    }
+}

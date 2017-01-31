@@ -39,7 +39,11 @@ export class PlayerService {
   };
 
   decreaseCrystals(amount) {
-    player.crystals -= amount;
+    if (player.crystals >= amount) {
+      player.crystals -= amount;
+    } else {
+      player.crystals = 0;
+    }
   };
 
   increaseCrystals(amount) {
