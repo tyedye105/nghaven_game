@@ -15,102 +15,109 @@ export class TravelComponent implements OnInit {
   ngOnInit() {
   }
 
-  travelEvents = [
-    function() {
-      this.playerService.increaseDaysRemaining(1);
-      //output "You gained one day"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseDaysRemaining(2);
-      //output "You gained two days"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseDaysRemaining(3);
-      //output "You gained three days"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseDaysRemaining(1);
-      //output "You lost one day"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseDaysRemaining(2);
-      //output "You lost two days"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseDaysRemaining(3);
-      //output "You lost three days"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseCrystals(10);
-      //output "You gained 10 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseCrystals(20);
-      //output "You gained 20 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseCrystals(30);
-      //output "You gained 30 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseCrystals(10);
-      //output "You lost 10 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseCrystals(20);
-      //output "You lost 20 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseCrystals(30);
-      //output "You lost 30 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseHp(10);
-      //output "You lost 10 HP"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseHp(25);
-      //output "You lost 25 HP"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseHp(50);
-      //output "You gained 50 crystals"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.increaseHp(10);
-      this.playerService.increaseCrystals(10);
-      //output "You gained 10 crystals and 10 hp"
-      console.log(this.newPlayer);
-    },
-    function() {
-      this.playerService.decreaseHp(10);
-      this.playerService.decreaseCrystals(10);
-      //output "You lost 10 crystals and 10 hp"
-      console.log(this.newPlayer);
-    }
-  ]
+  travelEvents(randomNumber) {
+    switch(randomNumber) {
+      case 1:
+        this.playerService.increaseDaysRemaining(1);
+        break;
+      case 2:
+        this.playerService.increaseDaysRemaining(2);
+        break;
+      case 3:
+        this.playerService.increaseDaysRemaining(3);
+        break;
+      case 4:
+        this.playerService.decreaseDaysRemaining(1);
+        break;
+      case 5:
+        this.playerService.decreaseDaysRemaining(2);
+        break;
+      case 6:
+        this.playerService.decreaseDaysRemaining(3);
+        break;
+      case 7:
+        this.playerService.increaseCrystals(10);
+        break;
+      case 8:
+        this.playerService.increaseCrystals(20);
+        break;
+      case 9:
+        this.playerService.increaseCrystals(30);
+      break;
+      case 10:
+        this.playerService.decreaseCrystals(10);
+        break;
+      case 11:
+        this.playerService.decreaseCrystals(20);
+        break;
+      case 12:
+        this.playerService.decreaseCrystals(30);
+        break;
+      case 13:
+        this.playerService.decreaseHp(10);
+        break;
+      case 14:
+        this.playerService.decreaseHp(25);
+        break;
+      case 15:
+        this.playerService.decreaseHp(50);
+        break;
+      case 16:
+        this.playerService.increaseHp(10);
+        this.playerService.increaseCrystals(10);
+        break;
+      case 17:
+        this.playerService.decreaseHp(10);
+        this.playerService.decreaseCrystals(10);
+        }
+      }
+
 
   travelFunction() {
-    // this.travelEvents[Math.floor(Math.random() * 17) + 1 ]();
-    this.travelEvents[0]();
-    // this.playerService.increaseDaysRemaining(1);
-      // this.playerService.decreaseHp(10);
-    console.log(this.playerService.newPlayer);
+    var randomNumber = Math.floor(Math.random() * 17) + 1;
+    this.travelEvents(randomNumber);
+    console.log(this.playerService.newPlayer)
   }
 
 }
+
+
+//
+// if (randomNumber === 1) {
+//     this.playerService.increaseDaysRemaining(1);
+//   } else if (randomNumber === 2) {
+//       this.playerService.increaseDaysRemaining(2);
+//     } else if (randomNumber === 3) {
+//       this.playerService.increaseDaysRemaining(3);
+//     } else if (randomNumber === 4) {
+//       this.playerService.decreaseDaysRemaining(1);
+//     } else if (randomNumber === 5) {
+//       this.playerService.decreaseDaysRemaining(2);
+//     } else if (randomNumber === 6) {
+//       this.playerService.decreaseDaysRemaining(3);
+//     } else if (randomNumber === 7) {
+//       this.playerService.increaseCrystals(10);
+//     } else if (randomNumber === 8) {
+//       this.playerService.increaseCrystals(20);
+//     } else if (randomNumber === 9) {
+//       this.playerService.increaseCrystals(30);
+//     } else if (randomNumber === 10) {
+//       this.playerService.decreaseCrystals(10);
+//     } else if (randomNumber === 11) {
+//       this.playerService.decreaseCrystals(20);
+//     } else if (randomNumber === 12) {
+//       this.playerService.decreaseCrystals(30);
+//     } else if (randomNumber ===  13) {
+//       this.playerService.decreaseHp(10);
+//     } else if (randomNumber === 14) {
+//       this.playerService.decreaseHp(25);
+//     } else if (randomNumber === 15) {
+//       this.playerService.decreaseHp(50);
+//     } else if (randomNumber === 16) {
+//       this.playerService.increaseHp(10);
+//       this.playerService.increaseCrystals(10);
+//     } else {
+//       this.playerService.decreaseHp(10);
+//       this.playerService.decreaseCrystals(10);
+//     }
+//   }
