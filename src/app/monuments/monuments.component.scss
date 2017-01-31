@@ -1,0 +1,11 @@
+#monument {
+  height: 500px;
+  width: 700px;
+  z-index: 5;
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
