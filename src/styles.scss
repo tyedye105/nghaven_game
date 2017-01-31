@@ -26,12 +26,14 @@ body {
   margin-top: -400px;
   position: absolute;
 }
+//
 
 .ui-left {
   width: 240px;
   height: 600px;
   float: left;
   border-right: 10px solid #692828;
+  margin-right: 1em;
   // background-color: blue;
 }
 
@@ -56,4 +58,9 @@ body {
 p {
   color:green;
   background-color: black;
+}
+.days {
+  font-family: sans-serif;
+  margin-top: .75em;
+  font-weight: bold;
 }
