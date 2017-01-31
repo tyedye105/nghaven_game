@@ -13,6 +13,8 @@ import { RestComponent } from './rest/rest.component';
 import { HealComponent } from './heal/heal.component';
 import { AboutComponent } from './about/about.component';
 
+import { Player } from './player.model';
+
 @NgModule({
   declarations: [
     AppComponent,
