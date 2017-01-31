@@ -1,23 +1,25 @@
 <div *ngIf="player.gameOver === true">
-  <h1>Game Over</h1>
-  <!-- <div ngIf="player.hp <= 0">
-    <h1>YOU</h1>
-    <h1>DIED</h1>
-    <h1>OF</h1>
-    <h1>Dysntery</h1>
-  </div> -->
-  <!-- <div ngIf="player.daysRemaining <= 0">
+    <div *ngIf="player.hp <= 0">
+      <h1>Game Over</h1>
+      <h1>YOU</h1>
+      <h1>DIED</h1>
+      <h1>OF</h1>
+      <h1>Dysntery</h1>
+    </div>
+  <div *ngIf="player.daysRemaining <= 0">
+    <h1>Game Over</h1>
     <h1>YOU STILL</h1>
     <h1>DIED</h1>
     <h1>OF</h1>
     <h1>Dysntery</h1>
   </div>
 
-  <div ngIf="player.milesToGoal <= 0">
+  <div *ngIf="player.milesToGoal <= 0">
     <h1>YOU MADE IT!</h1>
     <h1>BUT STILL DIED</h1>
     <h1>OF</h1>
     <h1>Dysntery</h1>
-  </div> -->
+    <h1>Game Over....</h1>
+  </div>
 
 </div>
