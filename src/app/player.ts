@@ -10,6 +10,7 @@ export var player = new Player(
   100,  //HP
   100,  //MaxHp
   300,  // crystals
+  true, // gameOver boolean
   false, //monument check
   false, //monument 1 check
   false, //monument 2 check

@@ -37,6 +37,12 @@ export class RestComponent {
       }
     }
     restFunction() {
+<<<<<<< HEAD
+      var randomNumber = Math.floor(Math.random() * 6) + 1;
+      this.restEvents(randomNumber);
+  
+    }
+=======
       if (this.playerService.getPlayer().crystals >= 10) {
         var chanceOfEvent = Math.floor(Math.random() * 10) + 1
         var randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -55,6 +61,7 @@ export class RestComponent {
         if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
           this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
         }
+>>>>>>> b59ac77d22643a2bfa9d69c0abad92ff1b25c858
 
         console.log(this.playerService.getPlayer())
       } else {

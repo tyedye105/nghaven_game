@@ -1,28 +1,36 @@
 
 <div id="statBlock">
   <h3 (click)="notNull()">Stats</h3>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.name}}
+  <div *ngIf="player">
+    {{player.name}}
   </div>
     <h5>Hp:</h5>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.hp}}
+  <div *ngIf="player">
+    {{player.hp}}
   </div>
     <h5>Crystals:</h5>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.crystals}}
+  <div *ngIf="player">
+  {{player.crystals}}
   </div>
     <h5>Speed:</h5>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.speed}}
+  <div *ngIf="player">
+    {{player.speed}}
   </div>
     <h5>Healing:</h5>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.healing}}
+  <div *ngIf="player">
+    {{player.healing}}
   </div>
     <h5>Gathering:</h5>
-  <div *ngIf="currentPlayer">
-    {{currentPlayer.gathering}}
-
+  <div *ngIf="player">
+    {{player.gathering}}
+  </div>
+  <div *ngIf="player">
+    {{player.milesToGoal}}
+  </div>
+  <div *ngIf="player">
+    {{player.daysRemaining}}
+  </div>
+  <div *ngIf="player">
+    {{player.gameOver}}
   </div>
 </div>

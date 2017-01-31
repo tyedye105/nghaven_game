@@ -11,15 +11,16 @@ import { Player } from './player.model';
 })
 
 export class AppComponent {
-  constructor(public playerService: PlayerService, ) {}
+  constructor(public playerService: PlayerService) {}
 
-
+  endGame: boolean = false;
   isNewPlayer: boolean = true;
 
   startGame() {
     this.isNewPlayer = false;
     var newPlayerName: string = prompt("Please Enter your name.");
     this.playerService.changeName(newPlayerName);
+    this.playerService.isGameOver(false)
     console.log(this.playerService.getPlayer());
     }
 

@@ -55,6 +55,7 @@ export class GatherComponent {
   gatherFunction() {
     var chanceOfEvent = Math.floor(Math.random() * 10) + 1;
     var randomNumber = Math.floor(Math.random() * 11) + 1;
+
     //event
     if (chanceOfEvent <= 5 ) {
       this.gatherEvents(randomNumber);
