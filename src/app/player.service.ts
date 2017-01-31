@@ -6,15 +6,16 @@ export class PlayerService {
   constructor() { }
 
   newPlayer = new Player(
-    "Player", //name
+    "", //name
     1000, //milesToGoal
     150,  //daysRemaining
     1,    //speed
     1,    //healing
     1,    //gathering
-    this.newPlayer.healing * 100, //hp
+    100,  //HP
     300,  // crystals
   );
+
 
   changeName = function(inputtedName) {
     this.newPlayer.name = inputtedName;
@@ -51,5 +52,4 @@ export class PlayerService {
   increaseCrystals(amount) {
     this.newPlayer.crystals += amount;
   };
-
 }
