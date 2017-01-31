@@ -42,7 +42,7 @@ export class RestComponent implements OnInit {
     restFunction() {
       var randomNumber = Math.floor(Math.random() * 6) + 1;
       this.restEvents(randomNumber);
-      console.log(this.playerService.newPlayer)
+      console.log(this.playerService.getPlayer())
     }
 
   }

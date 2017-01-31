@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -9,14 +9,8 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 
-
-export class GatherComponent implements OnInit {
-
+export class GatherComponent {
   constructor(private playerService: PlayerService) { }
-
-  ngOnInit() {
-  }
-
 
   gatherEvents(randomNumber) {
     switch(randomNumber) {
@@ -59,9 +53,18 @@ export class GatherComponent implements OnInit {
     }
 
   gatherFunction() {
+    var chanceOfEvent = Math.floor(Math.random() * 10) + 1;
     var randomNumber = Math.floor(Math.random() * 11) + 1;
-    this.gatherEvents(randomNumber);
-    console.log(this.playerService.newPlayer)
+    //event
+    if (chanceOfEvent <= 5 ) {
+      this.gatherEvents(randomNumber);
+    };
+    //increase crystals by gathering skill * 20
+    this.playerService.increaseCrystals(this.playerService.getPlayer().gathering * 20);
+    //decrease days remaining by 1
+    this.playerService.decreaseDaysRemaining(1);
+
+    console.log(this.playerService.getPlayer())
   }
 
 }

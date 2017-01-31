@@ -11,6 +11,7 @@ export class Player {
     public gathering: number,
 
     public hp: number,
+    public maxHp: number,
     public crystals: number
   ) {}
 

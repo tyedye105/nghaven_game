@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -9,7 +9,6 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class TravelComponent {
-  @Input() currentPlayer:Player;
   constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {
@@ -72,6 +71,7 @@ export class TravelComponent {
   travelFunction() {
     var chanceOfEvent = Math.floor(Math.random() * 10) + 1
     var randomNumber = Math.floor(Math.random() * 17) + 1;
+    //event
     if (chanceOfEvent <= 4) {
       this.travelEvents(randomNumber);
     };

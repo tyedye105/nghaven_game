@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
-import { player } from '../../player'
+import { player } from './player'
 
 @Injectable()
 export class PlayerService {
@@ -46,6 +46,6 @@ export class PlayerService {
     player.crystals += amount;
   };
   resetHp() {
-    this.newPlayer.hp = 100;
+    player.hp = player.maxHp;
   };
 }
