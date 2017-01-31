@@ -1,0 +1,12 @@
+
+{ "players": [{
+    "name": "Dude",
+    "milesToGoal": 1000,
+    "daysRemaining": 150,
+    "speed": 1,
+    "healing": 1,
+    "gathering": 1,
+    "hp": 100,
+    "crystals": 300
+  }]
+}

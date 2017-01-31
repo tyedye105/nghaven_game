@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Player } from '../player.model';
+import { PlayerService } from '../player.service'
 
 @Component({
   selector: 'game-stats',
   templateUrl: './stats.component.html',
-  styleUrls: ['./stats.component.scss']
+  styleUrls: ['./stats.component.scss'],
+  providers: [PlayerService]
 })
 export class StatsComponent implements OnInit {
-  playerStats: Array<string> = ["Health: 100", "Crystals :300", "10 miles per day", "Days Remaining: 100" ];
-  constructor() { }
+  @Input() currentPlayer;
+
+  constructor(public playerService: PlayerService) { }
 
   ngOnInit() {
-  }
 
+  }
+  notNull() {
+    alert(this.currentPlayer.name);
+  }
 }

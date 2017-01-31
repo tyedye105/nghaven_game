@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -8,12 +8,9 @@ import { PlayerService } from '../player.service';
   styleUrls: ['./travel.component.scss'],
   providers: [PlayerService]
 })
-export class TravelComponent implements OnInit {
-
-  constructor(private playerService: PlayerService) { }
-
-  ngOnInit() {
-  }
+export class TravelComponent {
+  @Input() currentPlayer:Player;
+  constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {
     switch(randomNumber) {
@@ -73,9 +70,19 @@ export class TravelComponent implements OnInit {
       }
 
   travelFunction() {
+    var chanceOfEvent = Math.floor(Math.random() * 10) + 1
     var randomNumber = Math.floor(Math.random() * 17) + 1;
-    this.travelEvents(randomNumber);
-    console.log(this.playerService.newPlayer)
+    if (chanceOfEvent <= 4) {
+      this.travelEvents(randomNumber);
+    };
+    //Spends crystals to travel
+    this.playerService.decreaseCrystals(10);
+    //Decreases days remaining by 1
+    this.playerService.decreaseDaysRemaining(1);
+    //Travels speed * 10 miles
+    this.playerService.decreaseMilesToGoal(this.playerService.getPlayer().speed * 10)
+
+    console.log(this.playerService.getPlayer());
   }
 
 }
