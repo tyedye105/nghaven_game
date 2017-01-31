@@ -10,7 +10,7 @@
   </div>
     <h5>Crystals:</h5>
   <div *ngIf="player">
-  {{player.crystals}} 
+  {{player.crystals}}
   </div>
     <h5>Speed:</h5>
   <div *ngIf="player">
@@ -23,6 +23,14 @@
     <h5>Gathering:</h5>
   <div *ngIf="player">
     {{player.gathering}}
-
+  </div>
+  <div *ngIf="player">
+    {{player.milesToGoal}}
+  </div>
+  <div *ngIf="player">
+    {{player.daysRemaining}}
+  </div>
+  <div *ngIf="player">
+    {{player.gameOver}}
   </div>
 </div>

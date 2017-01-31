@@ -14,6 +14,7 @@ import { HealComponent } from './heal/heal.component';
 import { AboutComponent } from './about/about.component';
 
 import { Player } from './player.model';
+import { EndScreenComponent } from './end-screen/end-screen.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Player } from './player.model';
     GatherComponent,
     RestComponent,
     HealComponent,
-    AboutComponent
+    AboutComponent,
+    EndScreenComponent
   ],
   imports: [
     BrowserModule,

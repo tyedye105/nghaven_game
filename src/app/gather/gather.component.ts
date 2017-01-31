@@ -61,7 +61,7 @@ export class GatherComponent implements OnInit {
   gatherFunction() {
     var randomNumber = Math.floor(Math.random() * 11) + 1;
     this.gatherEvents(randomNumber);
-
+    console.log(this.playerService.endGame);
   }
 
 }

@@ -11,7 +11,8 @@ export class Player {
     public gathering: number,
 
     public hp: number,
-    public crystals: number
+    public crystals: number,
+    public gameOver: boolean
   ) {}
 
 }

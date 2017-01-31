@@ -9,4 +9,5 @@ export var player = new Player(
   1,    //gathering
   100,  //HP
   300,  // crystals
+  null // gameOver boolean
 );
