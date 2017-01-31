@@ -15,12 +15,7 @@ export class HealComponent {
   constructor(private playerService: PlayerService) { }
 
     healFunction() {
-<<<<<<< HEAD
       var randomNumber = Math.floor(Math.random() * 8) + 1;
-      this.healEvents(randomNumber);
-
-    }
-=======
       if (this.playerService.getPlayer().crystals >= 30) {
           //Spends crystals
           this.playerService.decreaseCrystals(30);
@@ -36,6 +31,5 @@ export class HealComponent {
         } else {
           alert("You don't have enough crystals!")
         }
-      }
->>>>>>> b59ac77d22643a2bfa9d69c0abad92ff1b25c858
+    }
 }

@@ -12,13 +12,10 @@ import { GatherComponent } from './gather/gather.component';
 import { RestComponent } from './rest/rest.component';
 import { HealComponent } from './heal/heal.component';
 import { AboutComponent } from './about/about.component';
-
 import { Player } from './player.model';
-<<<<<<< HEAD
 import { EndScreenComponent } from './end-screen/end-screen.component';
-=======
 import { MonumentsComponent } from './monuments/monuments.component';
->>>>>>> b59ac77d22643a2bfa9d69c0abad92ff1b25c858
+
 
 @NgModule({
   declarations: [
@@ -31,11 +28,9 @@ import { MonumentsComponent } from './monuments/monuments.component';
     RestComponent,
     HealComponent,
     AboutComponent,
-<<<<<<< HEAD
-    EndScreenComponent
-=======
+    EndScreenComponent,
     MonumentsComponent
->>>>>>> b59ac77d22643a2bfa9d69c0abad92ff1b25c858
+
   ],
   imports: [
     BrowserModule,
