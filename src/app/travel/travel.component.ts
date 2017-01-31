@@ -9,7 +9,7 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class TravelComponent {
-  @Input() currentPlayer:Player;
+
   constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {

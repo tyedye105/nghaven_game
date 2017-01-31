@@ -9,14 +9,15 @@ import { PlayerService } from '../player.service'
   providers: [PlayerService]
 })
 export class StatsComponent implements OnInit {
-  @Input() currentPlayer;
-
+  player = this.playerService.getPlayer()
+  
   constructor(public playerService: PlayerService) { }
+
 
   ngOnInit() {
 
   }
   notNull() {
-    alert(this.currentPlayer.name);
+    alert(this.player.name);
   }
 }

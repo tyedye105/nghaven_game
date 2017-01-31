@@ -32,6 +32,7 @@ export class PlayerService {
 
   decreaseHp(amount) {
     player.hp -= amount;
+    this.checkLoss();
   };
 
   increaseHp(amount) {
@@ -48,4 +49,11 @@ export class PlayerService {
   resetHp() {
     player.hp = 100;
   };
+
+  checkLoss() {
+    if (player.hp <= 0) {
+      alert("You Died of Dysntery")
+    }
+  }
+
 }
