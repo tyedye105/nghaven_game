@@ -1,8 +1,28 @@
-<div class="statBlock">
-  <h3>Stats</h3>
-  <div class="statBlock" *ngFor=" let stat of playerStats">
-     {{stat}}
+
+<div id="statBlock">
+  <h3 (click)="notNull()">Stats</h3>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.name}}
+  </div>
+    <h5>Hp:</h5>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.hp}}
+  </div>
+    <h5>Crystals:</h5>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.crystals}}
+  </div>
+    <h5>Speed:</h5>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.speed}}
+  </div>
+    <h5>Healing:</h5>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.healing}}
+  </div>
+    <h5>Gathering:</h5>
+  <div *ngIf="currentPlayer">
+    {{currentPlayer.gathering}}
 
   </div>
-
 </div>

@@ -15,13 +15,14 @@
   <!-- <div *ngIf="isNewPlayer">
     <h1>Welcome to Haven! An Oregon Trail Like</h1>
     <p> If you would like to learn how to play, or read the lore behind Haven checkout out the about page! Otherwise click the start button below to begin your journey to Haven!</p>
-    <button (click)="startGame()">Start Game</button>
+
   </div> -->
+      <button (click)="startGame()">Start Game</button>
 
   <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
   <game-text></game-text>
-  <game-stats></game-stats>
+  <game-stats [currentPlayer]="currentPlayer"></game-stats>
   <div id="buttonGroup">
-    <travel></travel><gather></gather><rest></rest><heal></heal>
+    <travel (changeInPlayer)="decreaseDaysRemaining($event)" [currentPlayer]="currentPlayer"></travel><gather></gather><rest></rest><heal></heal>
   </div>
 </div>
