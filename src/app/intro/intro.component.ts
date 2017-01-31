@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'game-intro',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+
   constructor() { }
+
 
   ngOnInit() {
   }

@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsComponent implements OnInit {
   playerStats: Array<string> = ["Health: 100", "Crystals :300", "10 miles per day", "Days Remaining: 100" ];
-
   constructor() { }
 
   ngOnInit() {

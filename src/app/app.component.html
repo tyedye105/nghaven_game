@@ -1,7 +1,27 @@
-<h1>Haven: An Oregon Trail Like</h1>
-<game-intro></game-intro>
-<game-text></game-text>
-<game-stats></game-stats>
-<div id="buttonGroup">
-<travel></travel><gather></gather><rest></rest><heal></heal>
+<div class="ui-wrap">
+  <div class="ui-left">
+    <div class="ui-left-top">
+      <div class="days">Days Remaining</div>
+    </div>
+    <div class="ui-left-center"></div>
+    <div class="ui-left-bottom"></div>
+  </div>
+  <div class="ui-right"></div>
+
+
+  <!-- <div class="ui-header">
+    <h1>Haven: An Oregon Trail Like</h1>
+  </div> -->
+  <!-- <div *ngIf="isNewPlayer">
+    <h1>Welcome to Haven! An Oregon Trail Like</h1>
+    <p> If you would like to learn how to play, or read the lore behind Haven checkout out the about page! Otherwise click the start button below to begin your journey to Haven!</p>
+    <button (click)="startGame()">Start Game</button>
+  </div> -->
+
+  <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
+  <game-text></game-text>
+  <game-stats></game-stats>
+  <div id="buttonGroup">
+    <travel></travel><gather></gather><rest></rest><heal></heal>
+  </div>
 </div>

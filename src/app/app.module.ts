@@ -11,6 +11,7 @@ import { TravelComponent } from './travel/travel.component';
 import { GatherComponent } from './gather/gather.component';
 import { RestComponent } from './rest/rest.component';
 import { HealComponent } from './heal/heal.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HealComponent } from './heal/heal.component';
     TravelComponent,
     GatherComponent,
     RestComponent,
-    HealComponent
+    HealComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
