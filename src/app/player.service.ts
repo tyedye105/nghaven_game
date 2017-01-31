@@ -52,4 +52,7 @@ export class PlayerService {
   increaseCrystals(amount) {
     this.newPlayer.crystals += amount;
   };
+  resetHp() {
+    this.newPlayer.hp = 100;
+  };
 }
