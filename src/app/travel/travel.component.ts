@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component } from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -9,7 +9,6 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class TravelComponent {
-  @Input() currentPlayer:Player;
   constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {
@@ -69,21 +68,29 @@ export class TravelComponent {
         }
       }
 
-
   travelFunction() {
-    var chanceOfEvent = Math.floor(Math.random() * 10) + 1
-    var randomNumber = Math.floor(Math.random() * 17) + 1;
-    if (chanceOfEvent <= 4) {
-      this.travelEvents(randomNumber);
-    };
-    //Spends crystals to travel
-    this.playerService.decreaseCrystals(10);
-    //Decreases days remaining by 1
-    this.playerService.decreaseDaysRemaining(1);
-    //Travels speed * 10 miles
-    this.playerService.decreaseMilesToGoal(this.playerService.getPlayer().speed * 10)
+    if (this.playerService.getPlayer().crystals >= 10) {
+      var chanceOfEvent = Math.floor(Math.random() * 10) + 1
+      var randomNumber = Math.floor(Math.random() * 17) + 1;
+      //event
+      if (chanceOfEvent <= 4) {
+        this.travelEvents(randomNumber);
+      };
+      //Spends crystals to travel
+      this.playerService.decreaseCrystals(10);
+      //Decreases days remaining by 1
+      this.playerService.decreaseDaysRemaining(1);
+      //Travels speed * 10 miles
+      this.playerService.decreaseMilesToGoal(this.playerService.getPlayer().speed * 10);
+      //if HP is greater than Max Hp, hp becomes Max Hp
+      if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
+        this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
+      }
 
-    console.log(this.playerService.getPlayer());
+      console.log(this.playerService.getPlayer());
+    } else {
+      alert("You don't have enough crystals to travel");
+    }
   }
 
 }

@@ -7,6 +7,7 @@ import { Player } from './player.model';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [PlayerService]
 })
 
 export class AppComponent {
@@ -21,5 +22,5 @@ export class AppComponent {
     this.playerService.changeName(newPlayerName);
     console.log(this.playerService.getPlayer());
     }
-  
+
 }

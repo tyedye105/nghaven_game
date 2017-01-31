@@ -1,0 +1,8 @@
+<div id="monument" *ngIf="this.playerService.getPlayer().monumentCheck">
+  <p>You are at a monument</p>
+
+  <button (click)="increaseSpeed()">Speed +1</button>
+  <button (click)="increaseHealing()">Healing + 1</button>
+  <button (click)="increaseGathering()">Gathering + 1</button>
+  <button (click)="increaseMaxHp()">Max HP + 100</button>
+</div>

@@ -11,7 +11,13 @@ export class Player {
     public gathering: number,
 
     public hp: number,
-    public crystals: number
+    public maxHp: number,
+    public crystals: number,
+    public monumentCheck: boolean,
+    public monumentOneCheck: boolean,
+    public monumentTwoCheck: boolean,
+    public monumentThreeCheck: boolean,
+    public monumentFourCheck: boolean,
   ) {}
 
 }

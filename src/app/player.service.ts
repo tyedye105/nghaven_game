@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
-import { player } from '../../player'
+import { player } from './player'
 
 @Injectable()
 export class PlayerService {
@@ -16,6 +16,7 @@ export class PlayerService {
 
   decreaseMilesToGoal = function(amount) {
     player.milesToGoal -= amount;
+    this.checkIfMonument();
   };
 
   increaseMilesToGoal = function(amount) {
@@ -39,13 +40,50 @@ export class PlayerService {
   };
 
   decreaseCrystals(amount) {
-    player.crystals -= amount;
+    if (player.crystals >= amount) {
+      player.crystals -= amount;
+    } else {
+      player.crystals = 0;
+    }
   };
 
   increaseCrystals(amount) {
     player.crystals += amount;
   };
+
   resetHp() {
-    this.newPlayer.hp = 100;
+    player.hp = player.maxHp;
   };
+
+  //Monument functionality
+
+  checkIfMonument() {
+
+    //first monument
+    if(player.milesToGoal <= 800 && !player.monumentOneCheck) {
+      player.monumentOneCheck = true;
+      player.monumentCheck = true;
+    }
+
+    //Second monument
+    if(player.milesToGoal <= 600 && !player.monumentTwoCheck) {
+      player.monumentTwoCheck = true;
+      player.monumentCheck = true;
+    }
+
+    //Third monument
+    if(player.milesToGoal <= 400 && !player.monumentThreeCheck) {
+      player.monumentThreeCheck = true;
+      player.monumentCheck = true;
+    }
+
+    //Fourth monument
+    if(player.milesToGoal <= 200 && !player.monumentFourCheck) {
+      player.monumentFourCheck = true;
+      player.monumentCheck = true;
+    }
+  }
+
+
+
 }
