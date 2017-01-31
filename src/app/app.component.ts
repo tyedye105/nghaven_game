@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from './player.service';
+import { Player } from './player.model';
 // import { EventService } from './event.service';
 
 @Component({
@@ -12,9 +13,15 @@ import { PlayerService } from './player.service';
 
 
 export class AppComponent implements OnInit {
+  currentPlayer: Player;
   isNewPlayer: boolean = true;
   startGame() {
     this.isNewPlayer = false;
+  var  newPlayerName: string = prompt("Please Enter your name.")
+    this.currentPlayer = this.playerService.newPlayer;
+    this.currentPlayer.name = newPlayerName;
+    console.log(this.currentPlayer);
+    return this.currentPlayer
     }
 
   constructor(private playerService: PlayerService, ) {}

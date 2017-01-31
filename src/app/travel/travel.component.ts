@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 
@@ -9,10 +9,15 @@ import { PlayerService } from '../player.service';
   providers: [PlayerService]
 })
 export class TravelComponent implements OnInit {
-
+    @Input() currentPlayer:Player;
+    @Output() changeInPlayer = new EventEmitter();
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
+  }
+
+  tellMeYouName() {
+    alert(this.currentPlayer.name);
   }
 
   travelEvents(randomNumber) {
@@ -74,9 +79,11 @@ export class TravelComponent implements OnInit {
 
 
   travelFunction() {
-    var randomNumber = Math.floor(Math.random() * 17) + 1;
-    this.travelEvents(randomNumber);
-    console.log(this.playerService.newPlayer)
+    // var randomNumber = Math.floor(Math.random() * 17) + 1;
+    // this.travelEvents(14);
+
+    this.changeInPlayer.emit(-1);
+
   }
 
 }
