@@ -11,7 +11,7 @@ import { PlayerService } from '../player.service'
 export class StatsComponent implements OnInit {
   @Input() currentPlayer;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(public playerService: PlayerService) { }
 
   ngOnInit() {
 

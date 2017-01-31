@@ -1,55 +1,48 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
+import { player } from '../../player'
 
 @Injectable()
 export class PlayerService {
   constructor() { }
 
-  newPlayer = new Player(
-    "", //name
-    1000, //milesToGoal
-    150,  //daysRemaining
-    1,    //speed
-    1,    //healing
-    1,    //gathering
-    100,  //HP
-    300,  // crystals
-  );
-
+  getPlayer = function() {
+    return player;
+  }
 
   changeName = function(inputtedName) {
-    this.newPlayer.name = inputtedName;
+    player.name = inputtedName;
   };
 
   decreaseMilesToGoal = function(amount) {
-    this.newPlayer.milesToGoal -= amount;
+    player.milesToGoal -= amount;
   };
 
   increaseMilesToGoal = function(amount) {
-    this.newPlayer.milesToGoal += amount;
+    player.milesToGoal += amount;
   };
 
   decreaseDaysRemaining(amount) {
-    this.newPlayer.daysRemaining -= amount;
+    player.daysRemaining -= amount;
   };
 
   increaseDaysRemaining(amount) {
-    this.newPlayer.daysRemaining += amount;
+    player.daysRemaining += amount;
   };
 
   decreaseHp(amount) {
-    this.newPlayer.hp -= amount;
+    player.hp -= amount;
   };
 
   increaseHp(amount) {
-    this.newPlayer.hp += amount;
+    player.hp += amount;
   };
 
   decreaseCrystals(amount) {
-    this.newPlayer.crystals -= amount;
+    player.crystals -= amount;
   };
 
   increaseCrystals(amount) {
-    this.newPlayer.crystals += amount;
+    player.crystals += amount;
   };
 }
