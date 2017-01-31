@@ -47,8 +47,8 @@ export class HealComponent implements OnInit {
     }
 
     healFunction() {
-      // var randomNumber = Math.floor(Math.random() * 5) + 1;
-      this.healEvents(7);
+      var randomNumber = Math.floor(Math.random() * 8) + 1;
+      this.healEvents(randomNumber);
       console.log(this.playerService.newPlayer)
     }
 }
