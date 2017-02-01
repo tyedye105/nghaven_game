@@ -5,12 +5,10 @@ import { player } from './player'
 @Injectable()
 export class PlayerService {
   constructor() { }
-
-  isGameOver = function(boolean) {
-    player.gameOver = boolean;
-  }
-
-
+  //
+  // isGameOver = function(boolean) {
+  //   player.gameOver = boolean;
+  // }
 
   getPlayer = function() {
     return player;
@@ -22,9 +20,7 @@ export class PlayerService {
 
   decreaseMilesToGoal = function(amount) {
     player.milesToGoal -= amount;
-
     this.endGameCheck();
-
     this.checkIfMonument();
 
   };
@@ -65,14 +61,11 @@ export class PlayerService {
 
   endGameCheck() {
     if (player.hp <= 0) {
-      alert("You Died of Dysntery");
-      player.gameOver = true;
+      player.gameOver = "died";
     } else if  (player.daysRemaining <= 0) {
-      alert("You didn't reach Haven in time. The horde of 'coyotes that had been trailing behind you finally chaught up to and ended your lives.")
-      player.gameOver = true;
+      player.gameOver = "time";
     } else if (player.milesToGoal <= 0) {
-      alert("You have made it to Haven.  Congratulations.");
-      player.gameOver = true;
+      player.gameOver = "won";
     }
   }
   resetHp() {

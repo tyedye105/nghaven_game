@@ -12,7 +12,7 @@ export class Player {
     public hp: number,
     public maxHp: number,
     public crystals: number,
-    public gameOver: boolean,
+    public gameOver: string,
     public monumentCheck: boolean,
     public monumentOneCheck: boolean,
     public monumentTwoCheck: boolean,
