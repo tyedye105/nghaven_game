@@ -16,4 +16,5 @@ export var player = new Player(
   false, //monument 2 check
   false, //monument 3 check
   false, //monument 4 check
+  ["Welcome to Haven"], //output
 );

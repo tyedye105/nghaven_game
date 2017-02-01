@@ -14,14 +14,18 @@ export class AppComponent {
   constructor(public playerService: PlayerService) {}
 
   endGame: boolean = false;
-  isNewPlayer: boolean = true;
+  isNewPlayer: boolean = false;
 
   startGame() {
-    this.isNewPlayer = false;
+    this.isNewPlayer = true;
     var newPlayerName: string = prompt("Please Enter your name.");
     this.playerService.changeName(newPlayerName);
     this.playerService.isGameOver(false)
     console.log(this.playerService.getPlayer());
-    }
+  }
+
+  outputArray: string[] = this.playerService.getPlayer().output;
+
+
 
 }
