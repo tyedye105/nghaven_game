@@ -1,28 +1,25 @@
 div {
   float: left;
   width: 10%;
-  margin-top: 1em;
-  margin-left: 1em;
+  margin-right: 1em;
 }
 svg {
   cursor: pointer;
-  width: 50px;
-  margin: 0 0 -1em 0;
+  width: 100px;
+  margin: 0;
   &:hover {
-    path {
-      fill: #391b00;
+    circle {
+      fill: #441e0e;
+    }
+    #tools {
+      path {
+        fill: white;
+      }
+    }
+    #gather {
+      path {
+        fill: #c7442c;
+      }
     }
   }
-}
-
-h6 {
-  cursor: pointer;
-  color: #C6442d;
-  text-transform: uppercase;
-  font-size: .5em;
-  font-family: sans-serif;
-  &:hover {
-    color: #391b00;
-  }
-    margin-left: .65em;
 }

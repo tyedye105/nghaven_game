@@ -1,0 +1,19 @@
+.buttonGroup {
+  width: 100%;
+
+}
+
+.monumentsButtons {
+  float: left;
+  width: 10%;
+  margin: 1em 1em 0 0;
+}
+
+svg {
+  width: 100px;
+  &:hover {
+    circle {
+      fill: #c7442c;
+    }
+  }
+}
