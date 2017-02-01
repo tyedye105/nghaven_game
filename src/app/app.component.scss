@@ -1,0 +1,90 @@
+body {
+  background-image: url('../assets/images/HeaderFooter.jpg');
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  width: 80vw;
+  height: 80vh;
+  max-height: 800px;
+  max-width: 1200px;
+  border: 10px solid #692828;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.sidebar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  border-right: 10px solid #692828;
+}
+
+game-state {
+  height: 50%;
+  min-height: 450px;
+
+}
+
+.instructions {
+  height: 50%;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.main {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.output {
+  height: 70%;
+  border-bottom: 10px solid #692828;
+  padding: 10px;
+  overflow-y: scroll;
+  &-string {
+    text-align: center;
+    line-height: 30px;
+    opacity: 0.5;
+    display: block;
+    &:first-child {
+      opacity: 1;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.actions {
+  background: #692828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+
+.new-game {
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  border: 10px solid black;
+  transform: translate(-50%, -50%);
+  button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

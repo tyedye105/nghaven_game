@@ -18,8 +18,6 @@ export class Player {
     public monumentTwoCheck: boolean,
     public monumentThreeCheck: boolean,
     public monumentFourCheck: boolean,
-
-
     public output: string[],
 
   ) {}
