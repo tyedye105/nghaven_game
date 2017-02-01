@@ -7,15 +7,14 @@ export var player = new Player(
   1,    //speed
   1,    //healing
   1,    //gathering
-  100,  //HP
+  999,  //HP
   100,  //MaxHp
   300,  // crystals
-  true, // gameOver boolean
+  "", // gameOver boolean
   false, //monument check
   false, //monument 1 check
   false, //monument 2 check
   false, //monument 3 check
   false, //monument 4 check
-  ["Welcome to Haven"], //output
+  ["Welcome to Haven. Please see the bottom-left window for a description of the game."], //output
 );
- 
