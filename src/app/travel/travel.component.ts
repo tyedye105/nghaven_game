@@ -77,8 +77,9 @@ export class TravelComponent {
       if (chanceOfEvent <= 4) {
         this.travelEvents(randomNumber);
       };
+      this.playerService.getPlayer().output.unshift("You travel for the day, moving you closer to Haven. 20 crystals were depleted.");
       //Spends crystals to travel
-      this.playerService.decreaseCrystals(10);
+      this.playerService.decreaseCrystals(20);
       //Decreases days remaining by 1
       this.playerService.decreaseDaysRemaining(1);
       //Travels speed * 10 miles
@@ -86,9 +87,8 @@ export class TravelComponent {
       //if HP is greater than Max Hp, hp becomes Max Hp
       if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
         this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
-      }
+      };
 
-      console.log(this.playerService.getPlayer());
     } else {
       alert("You don't have enough crystals to travel");
     }

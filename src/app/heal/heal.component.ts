@@ -17,6 +17,7 @@ export class HealComponent {
     healFunction() {
       var randomNumber = Math.floor(Math.random() * 8) + 1;
       if (this.playerService.getPlayer().crystals >= 30) {
+          this.playerService.getPlayer().output.unshift("You use 30 crystals to heal your HP");
           //Spends crystals
           this.playerService.decreaseCrystals(30);
           //generates heal amount by randomly selecting 20 - 50 and multiplying by healing skill

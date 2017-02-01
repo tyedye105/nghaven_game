@@ -47,6 +47,7 @@ export class RestComponent {
           this.restEvents(randomNumber);
           console.log("event happened")
         }
+        this.playerService.getPlayer().output.unshift("You rest for the day, healing yourself, and burning 10 crystals to cook some food.");
         //spend crystals to rest
         this.playerService.decreaseCrystals(10);
         //decrease day remaining by 1

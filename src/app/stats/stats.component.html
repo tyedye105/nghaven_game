@@ -1,36 +1,33 @@
-
-<div id="statBlock">
-  <h3 (click)="notNull()">Stats</h3>
-  <div *ngIf="player">
-    {{player.name}}
+  <div class="stats-content">
+    <h3>Stats</h3>
+    <div class="stat" *ngIf="player">
+      <h4>{{player.name}}</h4>
+    </div><br>
+    <div class="stat" *ngIf="player">
+      <strong>HP</strong>
+      <br>{{player.hp}}
+    </div><br>
+    <div class="stat" *ngIf="player">
+    <strong>Crystals</strong>
+    <br>{{player.crystals}}
+  </div><br>
+    <div class="stat" *ngIf="player">
+    <strong>Speed</strong>
+    <br>{{player.speed}}
+  </div><br>
+    <div class="stat" *ngIf="player">
+      <strong>Healing</strong>
+      <br>{{player.healing}}
+    </div><br>
+    <div class="stat" *ngIf="player">
+    <strong>Gathering</strong>
+    <br>{{player.gathering}}
+  </div><br>
+    <div class="stat" *ngIf="player">
+    <strong>Miles to Haven</strong>
+    <br>{{player.milesToGoal}}
+  </div><br>
+    <div class="stat" *ngIf="player">
+    The horde is <strong>{{player.daysRemaining}}</strong> days behind you.
+    </div>
   </div>
-    <h5>Hp:</h5>
-  <div *ngIf="player">
-    {{player.hp}}
-  </div>
-    <h5>Crystals:</h5>
-  <div *ngIf="player">
-  {{player.crystals}}
-  </div>
-    <h5>Speed:</h5>
-  <div *ngIf="player">
-    {{player.speed}}
-  </div>
-    <h5>Healing:</h5>
-  <div *ngIf="player">
-    {{player.healing}}
-  </div>
-    <h5>Gathering:</h5>
-  <div *ngIf="player">
-    {{player.gathering}}
-  </div>
-  <div *ngIf="player">
-    {{player.milesToGoal}}
-  </div>
-  <div *ngIf="player">
-    {{player.daysRemaining}}
-  </div>
-  <div *ngIf="player">
-    {{player.gameOver}}
-  </div>
-</div>

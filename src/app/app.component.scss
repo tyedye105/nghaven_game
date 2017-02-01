@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background-image: url('../assets/images/HeaderFooter.jpg');
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  width: 90vw;
+  height: 80vh;
+  max-height: 800px;
+  max-width: 1200px;
+  border: 10px solid #692828;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+}
+
+
+game-stats {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  border-right: 10px solid #692828;
+}
+
+.main {
+  width: 70%;
+  height: 100%;
+}
+
+.output {
+  height: 70%;
+  border-bottom: 10px solid #692828;
+  padding: 10px;
+  overflow-y: scroll;
+  &-string {
+    line-height: 30px;
+    opacity: 0.5;
+    display: block;
+    &:first-child {
+      opacity: 1;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+
+.new-game {
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  border: 10px solid black;
+  transform: translate(-50%, -50%);
+  button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+// .ui-left-top {
+//   width: 220px;
+//   height: 180px;
+//   border-bottom: 10px solid #692828;
+//   background-color: #fff;
+//   padding: 10px;
+// }
+//
+// .ui-left-top .days {
+//
+// }
+//
+// .ui-header h1 {
+//   color: #333;
+//   padding: 15px;
+//   margin: 0;
+// }
+//
+// p {
+//   color:green;
+//   background-color: black;
+// }
