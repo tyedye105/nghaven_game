@@ -1,0 +1,13 @@
+.end-game-module {
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  border: 10px solid black;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  z-index: 25;
+  box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.5);
+}

@@ -2,8 +2,26 @@
   <div class="sidebar">
     <game-stats></game-stats>
     <div class="instructions">
-      <p>Here is a description of the game</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3>Game description</h3>
+      <p>Haven is a resource management and survival game in the same vein as The Oregon Trail. The goal of the game is to reach Haven safely, before a horde of humanoid coyotes with a penchant for violence, and unquenchable bloodlust catches up to you. During your travels, you must manage your crystals (energy) and HP (health) to ensure you reach Haven. Along the way, you will be met by many encounters that affect your resources and travel plans.</p>
+      <p>Your main actions are travel, gather, rest, or heal.<br><br>
+      <strong>Travel moves you closer to Haven, but spends a day and 20 crystals.</strong><br><br>
+      <strong>Gather increases your crystals, and takes a full day.</strong><br><br>
+      <strong>Rest heals your HP by a small amount, spends a day, and costs 10 crystals</strong><br><br>
+      <strong>Heal recovers your HP, but costs 30 crystals.</strong><br><br>
+
+
+      <p>Your <strong>HP</strong> is the amount of damage your are able to take. If you reach 0 HP at any point, you lose the game.</p>
+      <p>Your <strong>Crystals</strong> are spent whenever you expend energy. Traveling, gathering, and healing all use crystals.</p>
+      <p>Your <strong>Speed</strong>, <strong>Healing</strong>, and <strong>Gathering</strong> are your attributes.
+      <br><br>
+      <strong>Speed affects the distance you move per travel action.</strong>
+      <br><br>
+      <strong>Healing affects the amount of HP you recover while using the rest action or the heal action.</strong>
+      <br><br>
+      <strong>Gathering affects the amount of crystals you gain while using the gather action.</strong><br><br>
+      <strong>Your Max HP is the amount of HP you can have. You cannot go over your Max HP.</strong><br><br>
+      <p>Along the way, you will encounter landmarks that allow you to increase one of your stats by 1. Choose wisely!</p>
     </div>
   </div>
   <div class="main">
@@ -17,37 +35,25 @@
   </div>
 </div>
 
-
-<!--New Game Module-->
 <div *ngIf="!isNewPlayer" class="new-game">
+
+  <h2>Welcome to Haven</h2>
+  <p>After the establishment of New Arc, and the resulting Exodus, the Central  Wasteland erupted into chaos. Gangs of humans, and beast folk alike pillaging or capturing towns for their own greedy purposes. Those were the the lucky towns, others were destroyed without conscience. One of those settlements was what you called home.</p>
+
+  <p>By your determination to live, or perhaps sheer dumb luck, you survived the chaos that destroyed your home. As the new day dawns a traveler driving a large wagon, drawn by an even large tusked beast pass through the carnage. Surprised to see anyone alive he speaks to you.</p>
+
+  <p>“Dammit it all. Town after town I come to, each one of them has been reduced to nothing.”He pauses to take a glance around him, noting other survivors coming out of the rubble. “Yet, you folks are the first survivors I’ ve seen.  Listen, if you folks can pull your own weight, you can tag along with me to Haven.”</p>
+
+  <p>“Haven” you ask</p>
+
+  <p>“Haven is the last great city in the Central ‘ Wastes. Now gather what things your have left. We need to get moving.”</p>
+
+  <p><strong>Please enter your name:</strong></p>
+
+  <input [(ngModel)]="name">
   <button (click)="startGame()">Start Game</button>
 </div>
 
 <monuments></monuments>
 
-
-
-
-
-
-
-
-
-<!--<div class="wrapper">
-  <div class="sidebar">
-
-    <div class="ui-left-bottom">fdvs</div>
-  </div>
-  <div class="ui-right"></div>
-  <end-screen></end-screen>
-
-  <button (click)="startGame()">Start Game</button>
-
-  <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
-
-
-<!--New Game Module-->
-<div *ngIf="!isNewPlayer" class="new-game">
-  <button (click)="startGame()">Start Game</button>
-</div>
-
+<end-screen></end-screen>
