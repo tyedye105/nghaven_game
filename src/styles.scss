@@ -4,7 +4,7 @@
 body {
   background-image: url("assets/images/backgroundDifuuseIndex.png");
   background-color: $primary-color-yellow;
-  background-repeat: no-repeat;
-  background-size: cover cover;
+  background-repeat: repeat-y;
+  background-size: cover;
   background-position: top left;
 }
