@@ -84,18 +84,24 @@ export class PlayerService {
 
     //Second monument
     if(player.milesToGoal <= 600 && !player.monumentTwoCheck) {
+      player.monumentOneCheck =false;
       player.monumentTwoCheck = true;
       player.monumentCheck = true;
     }
 
     //Third monument
     if(player.milesToGoal <= 400 && !player.monumentThreeCheck) {
+      player.monumentOneCheck = false;
+      player.monumentTwoCheck = false;
       player.monumentThreeCheck = true;
       player.monumentCheck = true;
     }
 
     //Fourth monument
     if(player.milesToGoal <= 200 && !player.monumentFourCheck) {
+      player.monumentOneCheck = false;
+      player.monumentTwoCheck = false;
+      player.monumentThreeCheck = false;
       player.monumentFourCheck = true;
       player.monumentCheck = true;
     }
