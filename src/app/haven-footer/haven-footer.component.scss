@@ -1,0 +1,16 @@
+@import '../_variables.scss';
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  z-index: 1;
+  img {
+    position: relative;
+    bottom:0;
+    left:0;
+    width: 100%
+  }
+}

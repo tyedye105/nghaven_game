@@ -1,3 +1,5 @@
+<haven-header></haven-header>
+
 <div class="wrapper">
   <div class="sidebar">
     <game-stats></game-stats>
@@ -33,7 +35,7 @@
 
 
 
-<!--<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="sidebar">
 
     <div class="ui-left-bottom">fdvs</div>
@@ -44,10 +46,16 @@
   <button (click)="startGame()">Start Game</button>
 
   <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
+ -->
 
 
-<!--New Game Module-->
+
+<!-- New Game Module -->
 <div *ngIf="!isNewPlayer" class="new-game">
   <button (click)="startGame()">Start Game</button>
 </div>
+<div class="footer">
 
+<haven-footer></haven-footer>
+
+</div>

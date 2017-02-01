@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { Player } from './player.model';
 import { EndScreenComponent } from './end-screen/end-screen.component';
 import { MonumentsComponent } from './monuments/monuments.component';
+import { HavenFooterComponent } from './haven-footer/haven-footer.component';
+import { HavenHeaderComponent } from './haven-header/haven-header.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { MonumentsComponent } from './monuments/monuments.component';
     HealComponent,
     AboutComponent,
     EndScreenComponent,
-    MonumentsComponent
+    MonumentsComponent,
+    HavenFooterComponent,
+    HavenHeaderComponent
 
   ],
   imports: [
