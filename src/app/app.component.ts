@@ -24,4 +24,7 @@ export class AppComponent {
     console.log(this.playerService.getPlayer());
     }
 
+
+  outputArray: string[] = this.playerService.getPlayer().output;
+
 }
