@@ -1,3 +1,5 @@
+@import '../_variables.scss';
+
 .end-game-module {
   width: 50vw;
   position: absolute;
@@ -11,3 +13,4 @@
   z-index: 25;
   box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.5);
 }
+

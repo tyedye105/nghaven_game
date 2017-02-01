@@ -1,3 +1,5 @@
+<haven-header></haven-header>
+
 <div class="wrapper">
   <div class="sidebar">
     <game-stats></game-stats>
@@ -50,10 +52,21 @@
 
   <p><strong>Please enter your name:</strong></p>
 
+  <button (click)="startGame()">Start Game</button>
+
   <input [(ngModel)]="name">
+
   <button (click)="startGame()">Start Game</button>
 </div>
+
 
 <monuments></monuments>
 
 <end-screen></end-screen>
+
+<div class="footer">
+
+<haven-footer></haven-footer>
+
+</div>
+
