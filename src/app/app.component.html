@@ -1,30 +1,43 @@
-<div class="ui-wrap">
-  <div class="ui-left">
-    <div class="ui-left-top">
-      <div class="days">Days Remaining</div>
+<div class="wrapper">
+  <div class="sidebar">
+    <game-stats></game-stats>
+    <div class="instructions">
+      <p>Here is a description of the game</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-    <div class="ui-left-center"></div>
-    <div class="ui-left-bottom"></div>
+  </div>
+  <div class="main">
+    <div class="output">
+      <span class="output-string" *ngFor="let output of outputArray">{{output}}</span>
+    </div>
+    <div class="actions">
+      <travel></travel><gather></gather><rest></rest><heal></heal>
+    </div>
+  </div>
+</div>
+
+
+<!--New Game Module-->
+<div *ngIf="!isNewPlayer" class="new-game">
+  <button (click)="startGame()">Start Game</button>
+</div>
+
+<monuments></monuments>
+
+
+
+
+
+
+
+
+
+<!--<div class="wrapper">
+  <div class="sidebar">
+    <div class="ui-left-bottom">fdvs</div>
   </div>
   <div class="ui-right"></div>
   <end-screen></end-screen>
-
-  <!-- <div class="ui-header">
-    <h1>Haven: An Oregon Trail Like</h1>
-  </div>
-  <div *ngIf="isNewPlayer">
-    <h1>Welcome to Haven! An Oregon Trail Like</h1>
-    <p> If you would like to learn how to play, or read the lore behind Haven checkout out the about page! Otherwise click the start button below to begin your journey to Haven!</p>
-
-  </div> -->
-      <button (click)="startGame()">Start Game</button>
-
+  <button (click)="startGame()">Start Game</button>
   <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
-  <game-text></game-text>
-  <game-stats></game-stats>
-  <div id="buttonGroup">
-    <travel></travel><gather></gather><rest></rest><heal></heal>
-  </div>
-
 </div>
-<monuments></monuments>

@@ -19,6 +19,9 @@ export class Player {
     public monumentThreeCheck: boolean,
     public monumentFourCheck: boolean,
 
+
+    public output: string[],
+
   ) {}
 
 }
