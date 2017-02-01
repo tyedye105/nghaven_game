@@ -101,7 +101,7 @@ export class TravelComponent {
       //Decreases days remaining by 1
       this.playerService.decreaseDaysRemaining(1);
       //Travels speed * 10 miles
-      this.playerService.decreaseMilesToGoal(this.playerService.getPlayer().speed * 100);
+      this.playerService.decreaseMilesToGoal(this.playerService.getPlayer().speed * 10);
       //if HP is greater than Max Hp, hp becomes Max Hp
       if (this.playerService.getPlayer().hp >= this.playerService.getPlayer().maxHp) {
         this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;

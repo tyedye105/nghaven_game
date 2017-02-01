@@ -1,5 +1,4 @@
 <div id="monument" *ngIf="this.playerService.getPlayer().monumentCheck">
-  <div class="scrollBox">
 
   <h3>You have reached a monument:</h3>
 
@@ -13,55 +12,81 @@
       Then in the center of the town a giant marketplace the likes you have never seen before. A scene of orgainised chaos, the sights and sounds of everyone moving through the streets, merchants and food stalls peddling thier wares. All under the watchful sensors of the small group of andriods tasked with keeping the peace. You take as much of it in as you can, knowing that after leaving The Edge, it will be nothing but the arrid expanse of sand, rocks, and nothingness until you reach Haven.
     </p>
   </div>
-</div>
 
+  <div *ngIf="this.playerService.getPlayer().monumentTwoCheck === true">
+    <h1>The Refuge</h1>
+    <p>The second stretch of the journey through the treacherous uncaring terrain seemed drag on much longer than it had.  The dreams living in an acutal dwelling and not some suped up transport are constantly poping into your head.  Off in the distance is a large mountain with many smaller peaks.  The driver tells you that this the next stop in your journey.  It was remarkable that the driver was even able to navigate the bulky transport up the mountain path, but he did it.  When you finally step outside to see your surrounding your are taken aback.</p>
+    <p>
+      It seemed impossible, but here was a massive lake of clean water, and vegetation lining the walls provided by the mountain peaks.  Even back in the settled regions of the Centeral Waste, the water was not as clean as this! You spend the rest of the day by the lake, swimming and lounging around with out a care in the world.  Throughout the day other travelers come and go, a constant reminder that you too must leave this lake far behind and continue on your journey.
+    </p>
+  </div>
+
+  <div *ngIf="this.playerService.getPlayer().monumentThreeCheck === true">
+    <h1>The Crater</h1>
+    <p>A few hundred miles inland from the Western Ocean is an awe inspiring mountain range, that stretches from southern most part of the Centeral Waste, to the northen most point. Even a hundred miles out you can see the northernmost peak as it reflects the light that shines upon it.  After the ardous travel from peaceful scenery of the Refuge, you arrive at northern part of the mountain range.  The Crater.</p>
+    <p>
+   You walk up to the edge of the crater, and as far the eye can see the it swallows up everything including the mountain range. Looking to the sloping sides of the crater, you can make out rocks, and debris.  Even the center of the crater is too far away to make out, but if you squit hard enough, it looks like perhaps a space farring ship had crash long ago. Something truly horriffic was said to have happened centuries long before humans set foot up this world.
+    </p>
+    <p>
+      You step away from the edge and slowly gaze up from the depths of the crater to where the mountain range begins.  As the mountain rises up frmo the crater you can see the glass scars that cover the mountain reflecting the light of the sun. You think back to the Refuge reminding you there can be great beauty in this life, but as you stare into the depth of the crater you are brutually reminded there is the capactiy for utter destruction. Not dissimilar to the fate the befell your ancestors homeworld: Earth.
+    </p>
+  </div>
+
+  <div *ngIf="this.playerService.getPlayer().monumentFourCheck === true">
+    <h1>The Towers</h1>
+    <p> After traveling along the great mountain range seperating you from you reach the tail end of the moutain range on the southern edge of the Centeral Waste.  However, the untamed peaks quickly give way to a multitude of stone towers. The inhabitants of these have not used these towers in a long time, as thier once intricate decorations have beend dulled by the wind and sand. You watch as one of the towers in nearby finally crumbles into oblivion below. </p>
+    <p>
+      As you pass through the towers, you meet a small group of explores who have set up a permanent camp in the center of the towers.  Around the comfort of a campfire, an old-lizzard folk hobbles into the fire light from his seat. "When my great ancestors where young, it was said there was a civilization that lived above it all at the tops of these towers.  Even back then no one knew what they truly looked like, for them kept themselves wrapped in layers of leather, and cloth. They didn't even have wings! Yet upon these towers they lived and died. On great ships the hung in the sky, as a bird hangs on a branch. Then one day, they vanished. Thier great ships soon fell from the skies, still there was no trace that anyone had been aboard. Today their towers still stand, until they too crumble."
+    </p>
+    <p>
+      As you pass through the last bit of the ancient dead city, you can't help but to wonder what this place was really like. Soon your mind is pre-ocupied with something else. Haven is only two-hundred miles away! The journey is almost over!
+    </p>
+  </div>
 
   <div class="buttonGroup">
+    <div (click)="increaseSpeed()" class="monumentsButtons">
 
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+      	<circle cx="100" cy="100" r="100" fill="#441e0e"/>
+        <path fill="#C7442C" d="M104.2,50.6c11.5,6.4,20.1,17.9,23.6,31.7l15.8-5.6c-0.4-0.8-0.9-1.5-1.4-2.2l-1.6,1.6l-9.6-9.6l-1.8-1.8
+        	l2.5-2.5C123.9,55.7,114.3,51.6,104.2,50.6L104.2,50.6z"/>
+        <g>
+        	<path fill="#FFFFFF" d="M99.1,29.6c-35.5,0-64.4,28.9-64.4,64.4c0,13.6,4.3,26.3,11.5,36.7l8.5-5.7c-4.9-7-8.2-15.2-9.3-24.1h8.1
+        		v-5.1H45c0-0.6,0-1.2,0-1.8c0-12.9,4.5-24.8,12-34.1l5,5l3.6-3.6l-5.2-5.2c9.3-9.4,22-15.5,36.1-16.2v8.3h5.1v-8.3
+        		c14.1,0.7,26.8,6.7,36.1,16.2l-5.2,5.2l3.6,3.6l5-5c7.5,9.3,12,21.1,12,34.1c0,0.6,0,1.2,0,1.8h-8.5v5.1h8.1
+        		c-1.1,8.9-4.4,17.1-9.3,24.1l8.5,5.7c7.3-10.4,11.5-23.1,11.5-36.7C163.5,58.5,134.6,29.6,99.1,29.6L99.1,29.6z M148.1,74
+        		L98.2,91.3c-3.5,0.5-6.2,3.5-6.2,7.1c0,3.9,3.2,7.1,7.1,7.1c1.9,0,3.7-0.8,5-2.1L148.1,74L148.1,74z"/>
+        	<path fill="#C7442C" d="M143.4,83.2l-17.3,11.6c-1.4,12.3-7.2,23.4-16.1,30.8h21.7c5.4-5.5,9.2-12.2,11.3-19.5h-3.3v-15h4.8
+        		C144.4,88.5,144,85.9,143.4,83.2L143.4,83.2z"/>
+        </g>
+        <g enable-background="new    ">
+        	<path fill="#FFFFFF" d="M61.9,158.6c-0.1,0-0.2-0.2-0.2-0.3v-2.6c0-0.1,0.1-0.2,0.2-0.2h5.3c0.1,0,0.2,0.1,0.2,0.2
+        		c0.2,0.6,1.5,0.9,2.6,0.9h1.6c0.6,0,1.3-0.2,1.3-0.7c0-0.6-0.7-0.7-0.9-0.7c-0.2,0-4.1-0.3-4.5-0.3c-2.5-0.2-5.7-1.1-5.7-3.7
+        		c0-2,2.9-3,6.8-3h2c1.1,0,2.6,0.3,3.3,0.8c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0.1-0.2,0.2-0.2h4.2c0.1,0,0.2,0.2,0.2,0.3v2.5
+        		c0,0.1-0.1,0.2-0.2,0.2h-4.7c-0.1,0-0.1,0-0.2-0.1c-0.2-0.3-0.5-0.7-2-0.7h-2c-1,0-1.4,0.2-1.4,0.7s0.6,0.6,1.3,0.7
+        		c0.4,0,4.5,0.2,5.2,0.2c0.3,0,4.7,0.2,4.7,3.3c0,2.6-4,3.4-6.3,3.4h-2.5c-1,0-2.7-0.3-3-0.6c-0.2,0.2-0.4,0.3-0.6,0.4
+        		c-0.1,0.1-0.2,0.1-0.3,0.1H61.9z"/>
+        	<path fill="#FFFFFF" d="M95.4,148.2c2,0,6.2,1.8,6.2,5.3c0,3.6-3.9,5.1-6.9,5.1c-2,0-4.6-1-5.2-1.9v2h2.7c0.1,0,0.3,0.1,0.3,0.2
+        		v2.5c0,0.2-0.1,0.3-0.2,0.3h-12c-0.1,0-0.2,0-0.2-0.1v-2.7c0-0.1,0.1-0.2,0.2-0.2h2.8v-7.5h-2.7c-0.2,0-0.3-0.1-0.3-0.2v-2.4
+        		c0-0.2,0.1-0.4,0.3-0.4h9c0.1,0,0.2,0.1,0.2,0.2v1.6c0.7-0.9,2.2-1.9,4.4-1.9H95.4z M89.6,153.4c0,1.6,1.2,2.2,2.5,2.2
+        		c1.2,0,2.3-0.6,2.3-2.1c0-1.7-1.3-2.4-2.5-2.4C90.9,151.1,89.6,152,89.6,153.4z"/>
+        	<path fill="#FFFFFF" d="M112.8,158.6c-3,0-10-0.3-10-5.2c0-4.9,7.4-5.2,8.2-5.2h2.9c3.4,0,8.2,1.8,8.2,4.9v0.3
+        		c0,0.1-0.1,0.2-0.3,0.2H110c0.1,1.5,1.8,2,3.2,2h1.5c1.4,0,2.5-0.2,3.3-1.1c0.1-0.1,0.1-0.1,0.2-0.1h3.6c0.1,0,0.2,0.2,0.2,0.2
+        		c-0.4,1-1.7,4-7.5,4H112.8z M115.2,152c-0.3-0.6-0.9-1.2-2.3-1.2c-1.8,0-2.3,0.6-2.6,1.2H115.2z"/>
+        	<path fill="#FFFFFF" d="M133.4,158.6c-3,0-10-0.3-10-5.2c0-4.9,7.4-5.2,8.2-5.2h2.9c3.4,0,8.2,1.8,8.2,4.9v0.3
+        		c0,0.1-0.1,0.2-0.3,0.2h-11.8c0.1,1.5,1.8,2,3.2,2h1.5c1.4,0,2.5-0.2,3.3-1.1c0.1-0.1,0.1-0.1,0.2-0.1h3.6c0.1,0,0.2,0.2,0.2,0.2
+        		c-0.4,1-1.7,4-7.5,4H133.4z M135.8,152c-0.3-0.6-0.9-1.2-2.3-1.2c-1.8,0-2.3,0.6-2.6,1.2H135.8z"/>
+        	<path fill="#FFFFFF" d="M156.2,147h-2.7c-0.2,0-0.3-0.1-0.3-0.2v-2.4c0-0.3,0.1-0.4,0.2-0.4h9.1c0.1,0,0.2,0.1,0.2,0.2v11.2h2.7
+        		c0.1,0,0.1,0.1,0.1,0.3v2.7c0,0.1,0,0.2-0.1,0.2h-9.1c-0.1,0-0.2-0.1-0.2-0.3v-1.1c-0.4,0.4-1.8,1.4-4.2,1.4
+        		c-3.7,0-7.8-1.8-7.8-5.3c0-2.7,2.7-4.1,3.2-4.3c0.6-0.3,1.8-0.8,4.3-0.8c2,0,3.8,1.1,4.7,2V147z M151.5,153.4c0,1.6,1.3,2,2.4,2
+        		c1.2,0,2.3-0.6,2.3-2c0-1.6-1.4-2.2-2.5-2.2C152.5,151.2,151.5,152.3,151.5,153.4z"/>
+        </g>
+        <polygon fill="#FFFFFF" points="52.4,151.6 52.4,147.9 49,147.9 49,151.6 44.9,151.6 44.9,155.4 49,155.4 49,159.5 52.4,159.5
+        	52.4,155.4 56.4,155.4 56.4,151.6 "/>
+        </svg>
 
-  <div (click)="increaseSpeed()" class="monumentsButtons">
-
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-    	<circle cx="100" cy="100" r="100" fill="#441e0e"/>
-      <path fill="#C7442C" d="M104.2,50.6c11.5,6.4,20.1,17.9,23.6,31.7l15.8-5.6c-0.4-0.8-0.9-1.5-1.4-2.2l-1.6,1.6l-9.6-9.6l-1.8-1.8
-      	l2.5-2.5C123.9,55.7,114.3,51.6,104.2,50.6L104.2,50.6z"/>
-      <g>
-      	<path fill="#FFFFFF" d="M99.1,29.6c-35.5,0-64.4,28.9-64.4,64.4c0,13.6,4.3,26.3,11.5,36.7l8.5-5.7c-4.9-7-8.2-15.2-9.3-24.1h8.1
-      		v-5.1H45c0-0.6,0-1.2,0-1.8c0-12.9,4.5-24.8,12-34.1l5,5l3.6-3.6l-5.2-5.2c9.3-9.4,22-15.5,36.1-16.2v8.3h5.1v-8.3
-      		c14.1,0.7,26.8,6.7,36.1,16.2l-5.2,5.2l3.6,3.6l5-5c7.5,9.3,12,21.1,12,34.1c0,0.6,0,1.2,0,1.8h-8.5v5.1h8.1
-      		c-1.1,8.9-4.4,17.1-9.3,24.1l8.5,5.7c7.3-10.4,11.5-23.1,11.5-36.7C163.5,58.5,134.6,29.6,99.1,29.6L99.1,29.6z M148.1,74
-      		L98.2,91.3c-3.5,0.5-6.2,3.5-6.2,7.1c0,3.9,3.2,7.1,7.1,7.1c1.9,0,3.7-0.8,5-2.1L148.1,74L148.1,74z"/>
-      	<path fill="#C7442C" d="M143.4,83.2l-17.3,11.6c-1.4,12.3-7.2,23.4-16.1,30.8h21.7c5.4-5.5,9.2-12.2,11.3-19.5h-3.3v-15h4.8
-      		C144.4,88.5,144,85.9,143.4,83.2L143.4,83.2z"/>
-      </g>
-      <g enable-background="new    ">
-      	<path fill="#FFFFFF" d="M61.9,158.6c-0.1,0-0.2-0.2-0.2-0.3v-2.6c0-0.1,0.1-0.2,0.2-0.2h5.3c0.1,0,0.2,0.1,0.2,0.2
-      		c0.2,0.6,1.5,0.9,2.6,0.9h1.6c0.6,0,1.3-0.2,1.3-0.7c0-0.6-0.7-0.7-0.9-0.7c-0.2,0-4.1-0.3-4.5-0.3c-2.5-0.2-5.7-1.1-5.7-3.7
-      		c0-2,2.9-3,6.8-3h2c1.1,0,2.6,0.3,3.3,0.8c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0.1-0.2,0.2-0.2h4.2c0.1,0,0.2,0.2,0.2,0.3v2.5
-      		c0,0.1-0.1,0.2-0.2,0.2h-4.7c-0.1,0-0.1,0-0.2-0.1c-0.2-0.3-0.5-0.7-2-0.7h-2c-1,0-1.4,0.2-1.4,0.7s0.6,0.6,1.3,0.7
-      		c0.4,0,4.5,0.2,5.2,0.2c0.3,0,4.7,0.2,4.7,3.3c0,2.6-4,3.4-6.3,3.4h-2.5c-1,0-2.7-0.3-3-0.6c-0.2,0.2-0.4,0.3-0.6,0.4
-      		c-0.1,0.1-0.2,0.1-0.3,0.1H61.9z"/>
-      	<path fill="#FFFFFF" d="M95.4,148.2c2,0,6.2,1.8,6.2,5.3c0,3.6-3.9,5.1-6.9,5.1c-2,0-4.6-1-5.2-1.9v2h2.7c0.1,0,0.3,0.1,0.3,0.2
-      		v2.5c0,0.2-0.1,0.3-0.2,0.3h-12c-0.1,0-0.2,0-0.2-0.1v-2.7c0-0.1,0.1-0.2,0.2-0.2h2.8v-7.5h-2.7c-0.2,0-0.3-0.1-0.3-0.2v-2.4
-      		c0-0.2,0.1-0.4,0.3-0.4h9c0.1,0,0.2,0.1,0.2,0.2v1.6c0.7-0.9,2.2-1.9,4.4-1.9H95.4z M89.6,153.4c0,1.6,1.2,2.2,2.5,2.2
-      		c1.2,0,2.3-0.6,2.3-2.1c0-1.7-1.3-2.4-2.5-2.4C90.9,151.1,89.6,152,89.6,153.4z"/>
-      	<path fill="#FFFFFF" d="M112.8,158.6c-3,0-10-0.3-10-5.2c0-4.9,7.4-5.2,8.2-5.2h2.9c3.4,0,8.2,1.8,8.2,4.9v0.3
-      		c0,0.1-0.1,0.2-0.3,0.2H110c0.1,1.5,1.8,2,3.2,2h1.5c1.4,0,2.5-0.2,3.3-1.1c0.1-0.1,0.1-0.1,0.2-0.1h3.6c0.1,0,0.2,0.2,0.2,0.2
-      		c-0.4,1-1.7,4-7.5,4H112.8z M115.2,152c-0.3-0.6-0.9-1.2-2.3-1.2c-1.8,0-2.3,0.6-2.6,1.2H115.2z"/>
-      	<path fill="#FFFFFF" d="M133.4,158.6c-3,0-10-0.3-10-5.2c0-4.9,7.4-5.2,8.2-5.2h2.9c3.4,0,8.2,1.8,8.2,4.9v0.3
-      		c0,0.1-0.1,0.2-0.3,0.2h-11.8c0.1,1.5,1.8,2,3.2,2h1.5c1.4,0,2.5-0.2,3.3-1.1c0.1-0.1,0.1-0.1,0.2-0.1h3.6c0.1,0,0.2,0.2,0.2,0.2
-      		c-0.4,1-1.7,4-7.5,4H133.4z M135.8,152c-0.3-0.6-0.9-1.2-2.3-1.2c-1.8,0-2.3,0.6-2.6,1.2H135.8z"/>
-      	<path fill="#FFFFFF" d="M156.2,147h-2.7c-0.2,0-0.3-0.1-0.3-0.2v-2.4c0-0.3,0.1-0.4,0.2-0.4h9.1c0.1,0,0.2,0.1,0.2,0.2v11.2h2.7
-      		c0.1,0,0.1,0.1,0.1,0.3v2.7c0,0.1,0,0.2-0.1,0.2h-9.1c-0.1,0-0.2-0.1-0.2-0.3v-1.1c-0.4,0.4-1.8,1.4-4.2,1.4
-      		c-3.7,0-7.8-1.8-7.8-5.3c0-2.7,2.7-4.1,3.2-4.3c0.6-0.3,1.8-0.8,4.3-0.8c2,0,3.8,1.1,4.7,2V147z M151.5,153.4c0,1.6,1.3,2,2.4,2
-      		c1.2,0,2.3-0.6,2.3-2c0-1.6-1.4-2.2-2.5-2.2C152.5,151.2,151.5,152.3,151.5,153.4z"/>
-      </g>
-      <polygon fill="#FFFFFF" points="52.4,151.6 52.4,147.9 49,147.9 49,151.6 44.9,151.6 44.9,155.4 49,155.4 49,159.5 52.4,159.5
-      	52.4,155.4 56.4,155.4 56.4,151.6 "/>
-      </svg>
-
-  </div>
+    </div>
 
   <div (click)="increaseGathering()" class="monumentsButtons">
 
@@ -115,7 +140,6 @@
       	41.1,159.5 41.1,155.4 45.1,155.4 45.1,151.6 "/>
       </svg>
 
-
   </div>
 
   <div (click)="increaseHealing()" class="monumentsButtons">
@@ -163,7 +187,6 @@
          </g>
          </svg>
 
-
   </div>
 
   <div (click)="increaseMaxHp()" class="monumentsButtons">
@@ -179,39 +202,10 @@
          <path fill="#FFFFFF" d="M149.8,113H110v6h8v20h-8l0,7h30v-7h-8v-7h19c0.1,0,13-0.3,13-9.4C164,116.6,156.6,113,149.8,113z
          	 M144.2,126H132v-7h12.4c1.2,0,3.5,1.2,3.5,3.6C147.9,125,145.4,126,144.2,126z"/>
          </svg>
-  <div id="monument2" *ngIf="this.playerService.getPlayer().monumentTwoCheck === true">
-    <h1>The Refuge</h1>
-    <p>The second stretch of the journey through the treacherous uncaring terrain seemed drag on much longer than it had.  The dreams living in an acutal dwelling and not some suped up transport are constantly poping into your head.  Off in the distance is a large mountain with many smaller peaks.  The driver tells you that this the next stop in your journey.  It was remarkable that the driver was even able to navigate the bulky transport up the mountain path, but he did it.  When you finally step outside to see your surrounding your are taken aback.</p>
-    <p>
-      It seemed impossible, but here was a massive lake of clean water, and vegetation lining the walls provided by the mountain peaks.  Even back in the settled regions of the Centeral Waste, the water was not as clean as this! You spend the rest of the day by the lake, swimming and lounging around with out a care in the world.  Throughout the day other travelers come and go, a constant reminder that you too must leave this lake far behind and continue on your journey.
-    </p>
-    <p>
 
-    </p>
-  </div>
-  <div id="monument3" *ngIf="this.playerService.getPlayer().monumentThreeCheck === true">
-    <h1>The Crater</h1>
-    <p>A few hundred miles inland from the Western Ocean is an awe inspiring mountain range, that stretches from southern most part of the Centeral Waste, to the northen most point. Even a hundred miles out you can see the northernmost peak as it reflects the light that shines upon it.  After the ardous travel from peaceful scenery of the Refuge, you arrive at northern part of the mountain range.  The Crater.</p>
-    <p>
-   You walk up to the edge of the crater, and as far the eye can see the it swallows up everything including the mountain range. Looking to the sloping sides of the crater, you can make out rocks, and debris.  Even the center of the crater is too far away to make out, but if you squit hard enough, it looks like perhaps a space farring ship had crash long ago. Something truly horriffic was said to have happened centuries long before humans set foot up this world.
-    </p>
-    <p>
-      You step away from the edge and slowly gaze up from the depths of the crater to where the mountain range begins.  As the mountain rises up frmo the crater you can see the glass scars that cover the mountain reflecting the light of the sun. You think back to the Refuge reminding you there can be great beauty in this life, but as you stare into the depth of the crater you are brutually reminded there is the capactiy for utter destruction. Not dissimilar to the fate the befell your ancestors homeworld: Earth.
-    </p>
-  </div>
-  <div id="monument4" *ngIf="this.playerService.getPlayer().monumentFourCheck === true">
-    <h1>The Towers</h1>
-    <p> After traveling along the great mountain range seperating you from you reach the tail end of the moutain range on the southern edge of the Centeral Waste.  However, the untamed peaks quickly give way to a multitude of stone towers. The inhabitants of these have not used these towers in a long time, as thier once intricate decorations have beend dulled by the wind and sand. You watch as one of the towers in nearby finally crumbles into oblivion below. </p>
-    <p>
-      As you pass through the towers, you meet a small group of explores who have set up a permanent camp in the center of the towers.  Around the comfort of a campfire, an old-lizzard folk hobbles into the fire light from his seat. "When my great ancestors where young, it was said there was a civilization that lived above it all at the tops of these towers.  Even back then no one knew what they truly looked like, for them kept themselves wrapped in layers of leather, and cloth. They didn't even have wings! Yet upon these towers they lived and died. On great ships the hung in the sky, as a bird hangs on a branch. Then one day, they vanished. Thier great ships soon fell from the skies, still there was no trace that anyone had been aboard. Today their towers still stand, until they too crumble."
-    </p>
-    <p>
-      As you pass through the last bit of the ancient dead city, you can't help but to wonder what this place was really like. Soon your mind is pre-ocupied with something else. Haven is only two-hundred miles away! The journey is almost over!
-    </p>
-  </div>
-  <p> Your travels have made you stronger than before. Pick a stat to increase:</p>
 
   </div>
 
   </div>
+
 </div>
