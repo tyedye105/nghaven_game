@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PlayerService } from './player.service';
 import { Player } from './player.model';
 
@@ -10,24 +10,22 @@ import { Player } from './player.model';
   providers: [PlayerService]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(public playerService: PlayerService) {}
+
+  ngOnInit() {
+  }
 
   endGame: boolean = false;
   isNewPlayer: boolean = false;
 
+  name: string = "Adventurer";
+
   startGame() {
     this.isNewPlayer = true;
-    var newPlayerName: string = prompt("Please Enter your name.");
+    var newPlayerName: string = this.name;
     this.playerService.changeName(newPlayerName);
-    this.playerService.isGameOver(false)
-    console.log(this.playerService.getPlayer());
   }
-
-  outputArray: string[] = this.playerService.getPlayer().output;
-
-
-
 
   outputArray: string[] = this.playerService.getPlayer().output;
 
