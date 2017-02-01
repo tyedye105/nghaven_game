@@ -28,4 +28,7 @@ export class AppComponent {
 
 
 
+
+  outputArray: string[] = this.playerService.getPlayer().output;
+
 }

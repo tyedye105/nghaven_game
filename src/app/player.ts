@@ -18,3 +18,4 @@ export var player = new Player(
   false, //monument 4 check
   ["Welcome to Haven"], //output
 );
+ 

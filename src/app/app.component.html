@@ -13,6 +13,7 @@
     <div class="actions">
       <travel></travel><gather></gather><rest></rest><heal></heal>
     </div>
+
   </div>
 </div>
 
@@ -45,5 +46,8 @@
   <p><game-intro *ngIf="isNewPlayer === false"></game-intro></p>
 
 
+<!--New Game Module-->
+<div *ngIf="!isNewPlayer" class="new-game">
+  <button (click)="startGame()">Start Game</button>
 </div>
- -->
+

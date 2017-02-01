@@ -1,5 +1,18 @@
 <div id="monument" *ngIf="this.playerService.getPlayer().monumentCheck">
-  <p>You are at a monument</p>
+  <h3>You have reached a monument:</h3>
+  <div id="monument1" *ngIf="this.playerService.getPlayer().monumentOneCheck === true">
+    <h1>The Edge</h1>
+    <p>From your home, you and the rest of your companions traveled to the north. The most direct route to Haven would be straight across, but it also the most direct route to certain death. First you would need to pass the horde of violent humaniod coyotoes, calling themselves the 'Pack' gathering to the west. If you managed to go unoticed by the 'Pack' then there was the massive arid, sandy wasteland that streches for hundreds and hundreds of miles.  After several days of traveling you reached the first milestone of your journey. The Edge. </p>
+    <p>
+      This was the last major settlement on this side of the waste, and compared to Haven on the west coast, it was nothing more than small trading outpost.  All around the settlement were camps of the various races of continents. Owl creatuers known as the Okins, Lizard-Folk with scales of oranges and browns towering over even the tallest humans, Cat-folk sitting around watching all the goings on with intense curiosity, and oddly enough a small enclcave From the Apline Den, a race humanoid wolves who have been using crystals to power thier lives long before humans began to take "inspiration" from them.
+    </p>
+    <p>
+      Then in the center of the town a giant marketplace the likes you have never seen before. A scene of orgainised chaos, the sights and sounds of everyone moving through the streets, merchants and food stalls inviting anyone who would listen to take a look at thier wares. All under the watchful sensors of the small group of andriods tasked with keeping the peace. You take as much of it in as you can, knowing that after leaving The Edge, it will be nothing but the arrid expanse of sand, rocks, and nothingness until you reach Haven.
+    </p>
+  </div>
+  <div id="monument1" *ngIf="this.playerService.getPlayer().monumentOneCheck === true">
+    </di
+
 
   <button (click)="increaseSpeed()">Speed +1</button>
   <button (click)="increaseHealing()">Healing + 1</button>
