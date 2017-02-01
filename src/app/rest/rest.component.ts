@@ -61,7 +61,7 @@ export class RestComponent {
 
         console.log(this.playerService.getPlayer())
       } else {
-        alert("You don't have enough crystals to rest");
+        this.playerService.getPlayer().output.unshift("You don't have enough crystals to rest");
       }
     }
 }

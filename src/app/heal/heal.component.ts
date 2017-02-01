@@ -30,7 +30,7 @@ export class HealComponent {
           }
           console.log(this.playerService.getPlayer())
         } else {
-          alert("You don't have enough crystals!")
+          this.playerService.getPlayer().output.unshift("You don't have enough crystals!")
         }
     }
 }
