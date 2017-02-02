@@ -18,23 +18,23 @@ export class RestComponent {
     switch(randomNumber) {
       case 1:
         this.playerService.increaseDaysRemaining(1);
-          this.playerService.getPlayer().output.unshift("<strong>You have been traveling, and gathering crystals as you need, but now you need to take break from it all and rest. While enjoying the finest cuisines and a food synthesizer, there was a radio transmission speaking of the People's Militia pushing the coyotes back, giving you another day to get to Haven. <br><br>You gain 1 day.</strong><br>")
+          this.playerService.getPlayer().output.unshift("<strong>You have been traveling, and gathering crystals as you need, but now you need to take break from it all and rest. While enjoying the finest cuisines from the food synthesizer, there was a radio transmission speaking of the People's Militia pushing the coyotes back, giving you another day to get to Haven. <br><br>You gain 1 day.</strong><br>")
         break;
       case 2:
         this.playerService.decreaseDaysRemaining(1);
-        this.playerService.getPlayer().output.unshift("<strong>Tired, and weary, you stop to rest and recuperate for the day. You and your companions so worn down you slept for another day without realizing it. <br><br>You lose 1 day.</strong><br>")
+        this.playerService.getPlayer().output.unshift("<strong>Tired, and weary, you stop to rest and recuperate for the day. You and your companions were so worn down you slept for an extra day without realizing it. <br><br>You lose 1 day.</strong><br>")
         break;
       case 3:
         this.playerService.increaseCrystals(50);
-        this.playerService.getPlayer().output.unshift("<strong>In a strange dream, there was a small bird that leads you to a mound of crystals nearby. Upon waking up you, you see the same mound 10 feet away . You check the mound to find a whole bunch of crystals! Dreams do come true! <br><br>You gain 50 crystals.</strong><br>")
+        this.playerService.getPlayer().output.unshift("<strong>In a strange dream, there was a small bird that lead you to a mound of crystals nearby. Upon waking up you, you see the same mound ten feet away. You check the mound to find a whole bunch of crystals! Dreams do come true! <br><br>You gain 50 crystals.</strong><br>")
         break;
       case 4:
         this.playerService.decreaseCrystals(50);
-        this.playerService.getPlayer().output.unshift("<strong>While sleeping, an opportunistic thief struck your crystal stash... <br><br>You lose 50 crystals</strong><br>")
+        this.playerService.getPlayer().output.unshift("<strong>While sleeping, an opportunistic thief snuck into the transport and stole your crystals... <br><br>You lose 50 crystals</strong><br>")
         break;
       case 5:
         this.playerService.decreaseHp(20);
-        this.playerService.getPlayer().output.unshift("<strong>You don't believe, but the next morning your companions are telling you that you started sleeping walking, and stepped on a rolling urchin. Though that would explain the horrific pain in your left foot. <br><br>You lose 20 HP.</strong><br>")
+        this.playerService.getPlayer().output.unshift("<strong>When you wake up the next morning your companions are telling you that you started sleeping walking, and stepped on a rolling urchin. You don’t believe them, but it would explain the horrific pain in your left foot. <br><br>You lose 20 HP.</strong><br>")
         break;
       case 6:
         this.playerService.resetHp();
