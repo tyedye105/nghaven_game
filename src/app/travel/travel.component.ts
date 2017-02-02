@@ -72,7 +72,7 @@ export class TravelComponent {
       break;
     case 15:
       this.playerService.decreaseHp(35);
-      this.playerService.getPlayer().output.unshift("<strong>A lone Horned-Riat, blocks your only path forward. Not wanting wait for the lazy thing to move, you decide to get out from the safety from the transport. Several minutes later, and badly wounded, you get back into the transport and yell at the driver to go before that damned thing comes back. <br><br>You lose 50 HP</strong><br>");
+      this.playerService.getPlayer().output.unshift("<strong>A lone Horned-Riat, blocks your only path forward. Not wanting wait for the lazy thing to move, you decide to get out from the safety from the transport. Several minutes later, and badly wounded, you get back into the transport and yell at the driver to go before that damned thing comes back. <br><br>You lose 35 HP</strong><br>");
       break;
     case 16:
       this.playerService.increaseHp(10);
