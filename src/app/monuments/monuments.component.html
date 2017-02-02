@@ -2,7 +2,7 @@
 
   <h3>You have reached a monument:</h3>
 
-  <div *ngIf="this.playerService.getPlayer().monumentOneCheck === true">
+  <div *ngIf="this.playerService.getPlayer().lastMonument === 1">
     <h1>The Edge</h1>
     <p>From your home, you and the rest of your companions traveled to the north, in order not to come in contact with horde of violent humaniod coyotoes, calling themselves the 'Pack' gathering to the west. After several days of traveling you reached the first milestone of your journey. The Edge. </p>
     <p>
@@ -13,7 +13,7 @@
     </p>
   </div>
 
-  <div *ngIf="this.playerService.getPlayer().monumentTwoCheck === true">
+  <div *ngIf="this.playerService.getPlayer().lastMonument === 2">
     <h1>The Refuge</h1>
     <p>The second stretch of the journey through the treacherous uncaring terrain seemed drag on much longer than it had.  The dreams living in an acutal dwelling and not some suped up transport are constantly poping into your head.  Off in the distance is a large mountain with many smaller peaks.  The driver tells you that this the next stop in your journey.  It was remarkable that the driver was even able to navigate the bulky transport up the mountain path, but he did it.  When you finally step outside to see your surrounding your are taken aback.</p>
     <p>
@@ -21,7 +21,7 @@
     </p>
   </div>
 
-  <div *ngIf="this.playerService.getPlayer().monumentThreeCheck === true">
+  <div *ngIf="this.playerService.getPlayer().lastMonument === 3">
     <h1>The Crater</h1>
     <p>A few hundred miles inland from the Western Ocean is an awe inspiring mountain range, that stretches from southern most part of the Centeral Waste, to the northen most point. Even a hundred miles out you can see the northernmost peak as it reflects the light that shines upon it.  After the ardous travel from peaceful scenery of the Refuge, you arrive at northern part of the mountain range.  The Crater.</p>
     <p>
@@ -32,7 +32,7 @@
     </p>
   </div>
 
-  <div *ngIf="this.playerService.getPlayer().monumentFourCheck === true">
+  <div *ngIf="this.playerService.getPlayer().lastMonument === 4">
     <h1>The Towers</h1>
     <p> After traveling along the great mountain range seperating you from you reach the tail end of the moutain range on the southern edge of the Centeral Waste.  However, the untamed peaks quickly give way to a multitude of stone towers. The inhabitants of these have not used these towers in a long time, as thier once intricate decorations have beend dulled by the wind and sand. You watch as one of the towers in nearby finally crumbles into oblivion below. </p>
     <p>
@@ -42,6 +42,8 @@
       As you pass through the last bit of the ancient dead city, you can't help but to wonder what this place was really like. Soon your mind is pre-ocupied with something else. Haven is only two-hundred miles away! The journey is almost over!
     </p>
   </div>
+
+  <p><strong>Please select a stat to increase. Speed affects the distance you move per travel action. Gathering affects the amount of crystals you gain while using the gather action. Healing affects the amount of HP you recover while using the rest action or the heal action. Your Max HP is the amount of HP you can have. You cannot go over your Max HP.</strong></p>
 
   <div class="buttonGroup">
     <div (click)="increaseSpeed()" class="monumentsButtons">

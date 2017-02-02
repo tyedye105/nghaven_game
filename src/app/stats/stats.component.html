@@ -3,10 +3,18 @@
     <div class="stat" *ngIf="player.name">
       <h4>{{player.name}}</h4>
     </div><br>
-    <div class="stat" *ngIf="player">
+
+    <div class="stat" *ngIf="player.hp > -1">
       <strong>HP</strong>
       <br>{{player.hp}}
     </div><br>
+
+    <div class="stat" *ngIf="player.hp < 0">
+      <strong>HP</strong>
+      <br>0
+      <br>
+    </div>
+
     <div class="stat" *ngIf="player">
     <strong>Crystals</strong>
     <br>{{player.crystals}}

@@ -28,7 +28,7 @@
   </div>
   <div class="main">
     <div class="output">
-      <span class="output-string" *ngFor="let output of outputArray">{{output}}</span>
+      <span [innerHTML]="(output)" class="output-string" *ngFor="let output of outputArray"></span>
     </div>
     <div class="actions">
       <travel></travel><gather></gather><rest></rest><heal></heal>
