@@ -107,6 +107,9 @@ export class TravelComponent {
         this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
       };
 
+
+      var progressBar = document.getElementById('progress');
+
     } else {
       this.playerService.getPlayer().output.unshift("You don't have enough crystals to travel");
     }

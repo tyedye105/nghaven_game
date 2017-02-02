@@ -13,9 +13,11 @@ export class StatsComponent implements OnInit {
 
   constructor(public playerService: PlayerService) { }
 
+  progress = 1500 / this.player.milesToGoal + "%";
+
+  test: string = "50%";
 
   ngOnInit() {
-
   }
 
   instructionsShowing: boolean = false;
@@ -27,4 +29,7 @@ export class StatsComponent implements OnInit {
   hideInstructions() {
     this.instructionsShowing = false;
   }
+
+
+
 }
