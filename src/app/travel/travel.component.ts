@@ -71,7 +71,7 @@ export class TravelComponent {
       this.playerService.getPlayer().output.unshift("<strong>You were cruising through a stretch of flatland, from out of nowhere gunshots pelt the side of the transport. It was a motley gang humans, and coyote on hover-bikes. With a wheeled transport it was impossible to outrun them. You get in the one gun emplacement on the top of the transport to drive them off. You  managed to drive them off, but not before taking a few hits yourself. <br><br>You lose 25 HP.</strong><br>");
       break;
     case 15:
-      this.playerService.decreaseHp(50);
+      this.playerService.decreaseHp(35);
       this.playerService.getPlayer().output.unshift("<strong>A lone Horned-Riat, blocks your only path forward. Not wanting wait for the lazy thing to move, you decide to get out from the safety from the transport. Several minutes later, and badly wounded, you get back into the transport and yell at the driver to go before that damned thing comes back. <br><br>You lose 50 HP</strong><br>");
       break;
     case 16:

@@ -44,7 +44,6 @@ export class RestComponent {
     }
     restFunction() {
       var randomNumber = Math.floor(Math.random() * 6) + 1;
-      if (this.playerService.getPlayer().crystals >= 10) {
         var chanceOfEvent = Math.floor(Math.random() * 10) + 1
         var randomNumber = Math.floor(Math.random() * 6) + 1;
         // this.playerService.getPlayer().output.unshift("You rest for the day, healing yourself.");
@@ -63,8 +62,6 @@ export class RestComponent {
         }
 
         console.log(this.playerService.getPlayer())
-      } else {
-        this.playerService.getPlayer().output.unshift("You don't have enough crystals to rest");
-      }
+    
     }
 }
