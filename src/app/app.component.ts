@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from './player.service';
 import { Player } from './player.model';
+import { Routes, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class AppComponent implements OnInit {
 
   endGame: boolean = false;
   isNewPlayer: boolean = false;
-
+  seeGlossary: boolean = false;
   name: string = "";
   musicPlaying: boolean = true;
 
@@ -40,5 +41,12 @@ export class AppComponent implements OnInit {
     } else {
       this.musicPlaying = true;
     }
+  }
+
+  showGlossary() {
+    this.seeGlossary = true
+  }
+  hideGlossary() {
+    this.seeGlossary = false
   }
 }
