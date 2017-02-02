@@ -19,12 +19,16 @@ export class AppComponent implements OnInit {
   endGame: boolean = false;
   isNewPlayer: boolean = false;
 
-  name: string = "Adventurer";
+  name: string = "";
 
   startGame() {
-    this.isNewPlayer = true;
-    var newPlayerName: string = this.name;
-    this.playerService.changeName(newPlayerName);
+    if (this.name) {
+      this.isNewPlayer = true;
+      var newPlayerName: string = this.name;
+      this.playerService.changeName(newPlayerName);
+    } else {
+      alert("Please enter a name");
+    }
   }
 
   outputArray: string[] = this.playerService.getPlayer().output;

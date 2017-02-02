@@ -12,5 +12,21 @@
   padding: 20px;
   z-index: 25;
   box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.5);
+  button {
+    width: 20%;
+    height: 2.75em;
+    background: $primary-color-red;
+    font-family: $header-slab;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    border: 2px solid darken($primary-color-red, 10%);
+    border-radius: 5px;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($primary-color-red, 20%);
+    }
+  }
 }
-
