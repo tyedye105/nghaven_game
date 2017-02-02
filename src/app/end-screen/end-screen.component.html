@@ -1,5 +1,6 @@
 <div class="end-game-module" *ngIf="player.gameOver === 'died'">
   <h1>Game Over</h1>
+  <p [innerHTML]="(this.playerService.getPlayer().output[1])"></p>
     <p>The Journey to Haven is one frought with many dangers. Perhaps you had a deadly encounter with creatures such as the Horned-Riat or Ro-Quid. Or perhaps you died at the hands of bandits trying to steal your crystals. Hopefully you weren't done in by a tiny Rolling-Urchin.  May You Rest in Peace. </p>
     <button (click)="refresh()">New Game</button>
 </div>
@@ -11,7 +12,7 @@
 </div>
 
 <div class="end-game-module" *ngIf="player.gameOver === 'won'">
-  <h1>Game Over</h1>
+  <h1>You Won!</h1>
     <p>Overcoming the threats posed by wildlife, bandits, and everything else on this damned planet, you and your companions reach Haven.  Compared to the small settlement you once called home, you are overwhelmed by the sights. The outskirts covered in dweelings of stone and wood, but as you travel towards the city center the builds become made of steel, and stone. After passing through the city center you see something you have never seen before in your lifetime, the ocean. Haven was said to be a place of diversity, a place where one could start over, judging by all of the various Beast-Folk and humans simply going about thier lives, it seemed to be true.  </p>
     <button (click)="refresh()">New Game</button>
 </div>

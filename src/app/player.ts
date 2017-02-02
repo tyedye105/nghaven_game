@@ -2,7 +2,7 @@ import { Player } from './player.model';
 
 export var player = new Player(
   "", //name
-  1000, //milesToGoal
+  1500, //milesToGoal
   150,  //daysRemaining
   1,    //speed
   1,    //healing

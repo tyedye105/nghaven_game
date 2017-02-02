@@ -14,3 +14,43 @@
     font-size: 1.2em;
   }
 }
+
+.warning {
+  font-size: 1.3em;
+}
+
+.main-stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.5em;
+  margin: 20px 0;
+  strong {
+    color: black;
+  }
+  .stat {
+    text-align: center;
+  }
+
+}
+
+.secondary-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  .stat {
+    box-sizing: border-box;
+    background: $primary-color-red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    padding-top: 5%;
+    strong {
+      font-size: 0.8em;
+    }
+    &-number {
+      color: white;
+      font-size: 2em;
+    }
+  }
+}

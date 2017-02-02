@@ -77,19 +77,19 @@ export class PlayerService {
   checkIfMonument() {
 
     //first monument
-    if(player.milesToGoal <= 800 && player.lastMonument === 0) {
+    if(player.milesToGoal <= 1300 && player.lastMonument === 0) {
       player.lastMonument = 1;
       player.monumentCheck = true;
     }
 
     //Second monument
-    if(player.milesToGoal <= 600 && player.lastMonument === 1) {
+    if(player.milesToGoal <= 1000 && player.lastMonument === 1) {
       player.lastMonument = 2;
       player.monumentCheck = true;
     }
 
     //Third monument
-    if(player.milesToGoal <= 400 && player.lastMonument === 2) {
+    if(player.milesToGoal <= 600 && player.lastMonument === 2) {
       player.lastMonument = 3;
       player.monumentCheck = true;
     }
