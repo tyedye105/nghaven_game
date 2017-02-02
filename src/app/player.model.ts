@@ -14,10 +14,7 @@ export class Player {
     public crystals: number,
     public gameOver: string,
     public monumentCheck: boolean,
-    public monumentOneCheck: boolean,
-    public monumentTwoCheck: boolean,
-    public monumentThreeCheck: boolean,
-    public monumentFourCheck: boolean,
+    public lastMonument: number,
     public output: string[],
 
   ) {}
