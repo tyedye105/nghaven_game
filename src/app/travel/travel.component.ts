@@ -91,11 +91,11 @@ export class TravelComponent {
     if (this.playerService.getPlayer().crystals >= 10) {
       var chanceOfEvent = Math.floor(Math.random() * 10) + 1
       var randomNumber = Math.floor(Math.random() * 17) + 1;
+      // this.playerService.getPlayer().output.unshift("You travel for the day, moving you closer to Haven. 20 crystals were depleted.");
       //event
       if (chanceOfEvent <= 4) {
         this.travelEvents(randomNumber);
       };
-      this.playerService.getPlayer().output.unshift("You travel for the day, moving you closer to Haven. 20 crystals were depleted.");
       //Spends crystals to travel
       this.playerService.decreaseCrystals(20);
       //Decreases days remaining by 1

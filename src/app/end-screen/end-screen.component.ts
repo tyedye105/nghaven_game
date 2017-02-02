@@ -14,7 +14,7 @@ export class EndScreenComponent {
   player = this.playerService.getPlayer();
 
 
-  dieReason = this.playerService.getPlayer().output[1];
+  dieReason = this.playerService.getPlayer().output[0];
 
   refresh() {
     location.reload();

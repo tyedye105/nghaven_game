@@ -68,12 +68,11 @@ export class GatherComponent {
   gatherFunction() {
     var chanceOfEvent = Math.floor(Math.random() * 10) + 1;
     var randomNumber = Math.floor(Math.random() * 11) + 1;
-
-    //event
+    // this.playerService.getPlayer().output.unshift("You gather some crystals from nearby.");
+      //event
     if (chanceOfEvent <= 5 ) {
       this.gatherEvents(randomNumber);
     };
-    this.playerService.getPlayer().output.unshift("You gather some crystals from nearby.");
     //increase crystals by gathering skill * 20
     this.playerService.increaseCrystals(this.playerService.getPlayer().gathering * 20);
     //decrease days remaining by 1

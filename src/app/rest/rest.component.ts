@@ -44,16 +44,15 @@ export class RestComponent {
     }
     restFunction() {
       var randomNumber = Math.floor(Math.random() * 6) + 1;
-      this.restEvents(randomNumber);
       if (this.playerService.getPlayer().crystals >= 10) {
         var chanceOfEvent = Math.floor(Math.random() * 10) + 1
         var randomNumber = Math.floor(Math.random() * 6) + 1;
+        // this.playerService.getPlayer().output.unshift("You rest for the day, healing yourself.");
         //event
         if (chanceOfEvent <= 1) {
           this.restEvents(randomNumber);
           console.log("event happened")
         }
-        this.playerService.getPlayer().output.unshift("You rest for the day, healing yourself.");
         //decrease day remaining by 1
         this.playerService.decreaseDaysRemaining(1);
         //increase HP by healing * 20
