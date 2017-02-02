@@ -4,39 +4,94 @@
 
     <div class="main-stats">
 
-      <div class="stat" *ngIf="player.hp > -1">
+      <div id="hp" class="stat" *ngIf="player.hp > -1">
+        <div id="hp-description">
+          <p>Your <strong>HP</strong> is the amount of damage you are able to take. If you reach 0 HP at any point, you lose the game.</p>
+        </div>
         <strong>HP</strong>
-        <br>{{player.hp}}<br>
-        <span class="warning" *ngIf="player.hp < 50"></span>
+        <br><span class="big-stat">{{player.hp}}</span><br>
       </div>
 
-      <div class="stat" *ngIf="player">
+      <div id="crystals" class="stat" *ngIf="player">
+        <div id="crystals-description">
+          <p>Your <strong>Crystals</strong> are spent whenever you expend energy. Traveling, gathering, and healing all use crystals.</p>
+        </div>
         <strong>Crystals</strong>
-        <br>{{player.crystals}}
+        <br><span class="big-stat">{{player.crystals}}</span>
       </div>
     </div>
 
     <div class="secondary-stats">
       <div id="speed" class="stat" *ngIf="player">
+        <div id="speed-description">
+          <p>Speed affects the distance you move per travel action.</p>
+        </div>
         <strong>Speed</strong><br>
         <span class="stat-number">{{player.speed}}</span>
       </div>
-      <div class="stat" *ngIf="player">
+      <div id="healing" class="stat" *ngIf="player">
+        <div id="healing-description">
+          <p>Healing affects the amount of HP you recover while using the rest action or the heal action.</p>
+        </div>
         <strong>Healing</strong><br>
         <span class="stat-number">{{player.healing}}</span>
       </div>
-      <div class="stat" *ngIf="player">
+      <div id="gathering" class="stat" *ngIf="player">
+        <div id="gathering-description">
+          <p>Gathering affects the amount of crystals you gain while using the gather action.</p>
+        </div>
         <strong>Gathering</strong><br>
         <span class="stat-number">{{player.gathering}}</span>
     </div>
 
     </div>
 
-    <div class="stat" *ngIf="player">
+    <div class="stat" id="miles" *ngIf="player">
+      <div id="miles-description">
+        <p>You win the game once you reach Haven.</p>
+      </div>
     <strong>Miles to Haven</strong>
     <br>{{player.milesToGoal}}
   </div><br>
-    <div class="stat" *ngIf="player">
-    The horde is <strong>{{player.daysRemaining}}</strong> days behind you.
+    <div class="stat" id="horde" *ngIf="player">
+      <div id="horde-description">
+        <p>You must get to Haven before the horde reaches you.</p>
+      </div>
+    The horde is <strong class="important">{{player.daysRemaining}}</strong> days behind you.
     </div>
+
+
+
+
+    <br>
+    <button (click)="showInstructions()">How to Play</button>
+
+
+
+
+  </div>
+
+  <div class="instructions" *ngIf="instructionsShowing">
+    <div class="close" (click)="hideInstructions()">X</div>
+    <h3 class="instructions-header">How to Play</h3>
+    <p>Haven is a resource management and survival game in the same vein as The Oregon Trail. The goal of the game is to reach Haven safely, before a horde of humanoid coyotes with a penchant for violence, and unquenchable bloodlust catches up to you. During your travels, you must manage your crystals (energy) and HP (health) to ensure you reach Haven. Along the way, you will be met by many encounters that affect your resources and travel plans.</p>
+    <p>Your main actions are travel, gather, rest, or heal.<br><br>
+    <strong>Travel moves you closer to Haven, but spends a day and 20 crystals.</strong><br><br>
+    <strong>Gather increases your crystals, and takes a full day.</strong><br><br>
+    <strong>Rest heals your HP by a small amount and costs you 1 day.</strong><br><br>
+    <strong>Heal recovers your HP, but costs 30 crystals.</strong><br><br>
+
+
+    <p>Your <strong>HP</strong> is the amount of damage your are able to take. If you reach 0 HP at any point, you lose the game.</p>
+    <p>Your <strong>Crystals</strong> are spent whenever you expend energy. Traveling, gathering, and healing all use crystals.</p>
+    <p>Your <strong>Speed</strong>, <strong>Healing</strong>, and <strong>Gathering</strong> are your attributes.
+    <br><br>
+    <strong>Speed affects the distance you move per travel action.</strong>
+    <br><br>
+    <strong>Healing affects the amount of HP you recover while using the rest action or the heal action.</strong>
+    <br><br>
+    <strong>Gathering affects the amount of crystals you gain while using the gather action.</strong><br><br>
+    <strong>Your Max HP is the amount of HP you can have. You cannot go over your Max HP.</strong><br><br>
+
+    <p>Along the way, you will encounter landmarks that allow you to increase one of your stats by 1. Choose wisely!</p>
   </div>
