@@ -185,3 +185,41 @@ game-stats {
     width: 100%
   }
 }
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    border: 0;
+  }
+
+  game-stats {
+    width: 100%;
+    border: 0;
+    border-bottom: 10px solid #692828;
+    overflow: scroll;
+  }
+
+  .instructions {
+    display: none;
+    &-header {
+      display: none;
+    }
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .new-game {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+
+}
