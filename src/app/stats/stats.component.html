@@ -45,29 +45,33 @@
     </div>
 
     </div>
-
-    <div class="stat" id="miles" *ngIf="player">
-      <div id="miles-description">
-        <p>You win the game once you reach Haven.</p>
-      </div>
-    <strong>Miles to Haven</strong>
-    <br>{{player.milesToGoal}}
-  </div><br>
     <div class="stat" id="horde" *ngIf="player">
       <div id="horde-description">
         <p>You must get to Haven before the horde reaches you.</p>
       </div>
     The horde is <strong class="important">{{player.daysRemaining}}</strong> days behind you.
-    </div>
+  </div><br><br>
+
+    <div class="map-container">
+      <div id="progress-bar" [style.width]="progress + '%'">
+      </div>
+      <div class="main-map">
+        <img src="../assets/images/map.png" alt="A map">
+
+      </div>
+
+    </div><br>
+
+    <div class="stat" id="miles" *ngIf="player">
+      <div id="miles-description">
+        <p>Miles remaining to Haven</p>
+      </div>
+  <strong class="important">{{player.milesToGoal}}</strong> days to Haven.
+  </div>
+  <br>
 
 
-
-
-    <br>
     <button (click)="showInstructions()">How to Play</button>
-
-
-
 
   </div>
 

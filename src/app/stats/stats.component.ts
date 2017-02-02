@@ -13,12 +13,19 @@ export class StatsComponent implements OnInit {
 
   constructor(public playerService: PlayerService) { }
 
-
   ngOnInit() {
-
+    var that = this;
+    setInterval(function(){
+      that.progress = 100 - (that.player.milesToGoal / 15);
+      console.log(that.progress);
+    }, 100);
   }
 
+
+
   instructionsShowing: boolean = false;
+
+  progress: number = null;
 
   showInstructions() {
     this.instructionsShowing = true;
@@ -27,4 +34,7 @@ export class StatsComponent implements OnInit {
   hideInstructions() {
     this.instructionsShowing = false;
   }
+
+
+
 }

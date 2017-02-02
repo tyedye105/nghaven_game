@@ -10,6 +10,9 @@ import { PlayerService } from '../player.service';
 })
 export class TravelComponent {
 
+
+
+
   constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {
@@ -111,5 +114,7 @@ export class TravelComponent {
       this.playerService.getPlayer().output.unshift("You don't have enough crystals to travel");
     }
   }
+
+
 
 }
