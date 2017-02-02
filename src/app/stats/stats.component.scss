@@ -1,12 +1,20 @@
 @import '../_variables.scss';
 
 .stats-content {
-  padding: 20px;
+  padding: 0;
   text-align: center;
   border-bottom: 10px solid #692828;
+  margin: 0;
   h3 {
+    font-size: 2em;
+    color: $white;
+    background-color: $border-color-brown;
+    padding: -30px 0 -20px -20px;
     margin: 0;
-    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
   }
   h4 {
     margin: 0;
