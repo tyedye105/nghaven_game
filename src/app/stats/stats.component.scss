@@ -1,10 +1,9 @@
 @import '../_variables.scss';
 
 .stats-content {
-  padding: 0;
+  padding-bottom: 20px;
   text-align: center;
   border-bottom: 10px solid #692828;
-  margin: 0;
   h3 {
     font-size: 2em;
     color: $white;
