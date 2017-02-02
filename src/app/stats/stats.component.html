@@ -4,33 +4,36 @@
       <h4>{{player.name}}</h4>
     </div><br>
 
-    <div class="stat" *ngIf="player.hp > -1">
-      <strong>HP</strong>
-      <br>{{player.hp}}
-    </div><br>
+    <div class="main-stats">
 
-    <div class="stat" *ngIf="player.hp < 0">
-      <strong>HP</strong>
-      <br>0
-      <br>
+      <div class="stat" *ngIf="player.hp > -1">
+        <strong>HP</strong>
+        <br>{{player.hp}}<br>
+        <span class="warning" *ngIf="player.hp < 50"><br>*Low HP! Rest or heal<br></span>
+      </div>
+
+      <div class="stat" *ngIf="player">
+        <strong>Crystals</strong>
+        <br>{{player.crystals}}
+      </div>
     </div>
 
-    <div class="stat" *ngIf="player">
-    <strong>Crystals</strong>
-    <br>{{player.crystals}}
-  </div><br>
-    <div class="stat" *ngIf="player">
-    <strong>Speed</strong>
-    <br>{{player.speed}}
-  </div><br>
-    <div class="stat" *ngIf="player">
-      <strong>Healing</strong>
-      <br>{{player.healing}}
-    </div><br>
-    <div class="stat" *ngIf="player">
-    <strong>Gathering</strong>
-    <br>{{player.gathering}}
-  </div><br>
+    <div class="secondary-stats">
+      <div id="speed" class="stat" *ngIf="player">
+        <strong>Speed</strong><br>
+        <span class="stat-number">{{player.speed}}</span>
+      </div>
+      <div class="stat" *ngIf="player">
+        <strong>Healing</strong><br>
+        <span class="stat-number">{{player.healing}}</span>
+      </div>
+      <div class="stat" *ngIf="player">
+        <strong>Gathering</strong><br>
+        <span class="stat-number">{{player.gathering}}</span>
+    </div>
+
+    </div>
+
     <div class="stat" *ngIf="player">
     <strong>Miles to Haven</strong>
     <br>{{player.milesToGoal}}
