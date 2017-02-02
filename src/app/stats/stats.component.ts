@@ -17,4 +17,14 @@ export class StatsComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  instructionsShowing: boolean = false;
+
+  showInstructions() {
+    this.instructionsShowing = true;
+  }
+
+  hideInstructions() {
+    this.instructionsShowing = false;
+  }
 }

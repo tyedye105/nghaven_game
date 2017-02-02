@@ -2,8 +2,10 @@
 
 .stats-content {
   padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  border-bottom: 10px solid #692828;
+  height: 100%;
   width: 100%;
   h3 {
     font-size: 2em;
@@ -23,8 +25,19 @@
   }
 }
 
-.warning {
+#horde {
+  font-size: 1.2em;
+}
+
+.important {
   font-size: 1.3em;
+  color: $primary-color-red;
+}
+
+.big-stat {
+  color: $primary-color-red;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 2px solid black;
 }
 
 .main-stats {
@@ -60,5 +73,82 @@
       color: white;
       font-size: 2em;
     }
+  }
+}
+
+.instructions {
+  width: 75vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  border: 10px solid black;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  z-index: 100;
+  box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.5);
+  background-image: url("../assets/images/introSceneLightest.jpg");
+  background-size: cover;
+  &-header {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin:0;
+    padding:0;
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-family: $header-sans;
+    font-weight: bold;
+    font-size: 1.5em;
+    &:hover {
+      cursor: pointer;
+      color: $primary-color-red;
+    }
+  }
+}
+
+button {
+  padding: 0 10px;
+  height: 2.75em;
+  background: $primary-color-red;
+  font-family: $header-slab;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  border: 2px solid darken($primary-color-red, 10%);
+  border-radius: 5px;
+  color: $white;
+  margin: 0;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($primary-color-red, 20%);
+  }
+}
+
+@each $stat in hp, crystals, speed, healing, gathering, horde, miles {
+  ##{$stat} {
+    cursor: pointer;
+    &-description {
+      z-index: 5;
+      font-size: 1rem;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      background-color: $primary-color-red;
+      color: white;
+      width: calc(100% - 10px);
+      overflow: hidden;
+      padding: 5px;
+      transition: all 200ms ease-in;
+    }
+  }
+
+  ##{$stat}:hover  ##{$stat}-description {
+      bottom: 10px;
   }
 }

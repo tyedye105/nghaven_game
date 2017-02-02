@@ -42,6 +42,8 @@
 
 game-stats {
   background: url("./assets/images/divbg.png");
+  height: 100%;
+  overflow: hidden;
 }
 
 .instructions {
@@ -59,7 +61,6 @@ game-stats {
 
 .output {
   height: 75%;
-  // border-top: 10px solid #692828;
   padding: 10px;
   position: relative;
   transform: rotate(180deg);

@@ -13,5 +13,5 @@ export var player = new Player(
   "", // gameOver boolean
   false, //monument check
   0, //monument 1 check
-  ["Welcome to Haven. Please see the bottom-left window for a description of the game."], //output
+  ["Welcome to Haven. Please click the 'How to Play' button for instructions."], //output
 );
