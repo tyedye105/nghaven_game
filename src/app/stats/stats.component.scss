@@ -1,16 +1,64 @@
 @import '../_variables.scss';
 
 .stats-content {
-  padding: 20px;
+  padding: 0;
   text-align: center;
   border-bottom: 10px solid #692828;
+  margin: 0;
   h3 {
+    font-size: 2em;
+    color: $white;
+    background-color: $border-color-brown;
+    padding: -30px 0 -20px -20px;
     margin: 0;
-    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
   }
   h4 {
     margin: 0;
     margin-top: 10px;
     font-size: 1.2em;
+  }
+}
+
+.warning {
+  font-size: 1.3em;
+}
+
+.main-stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.5em;
+  margin: 20px 0;
+  strong {
+    color: black;
+  }
+  .stat {
+    text-align: center;
+  }
+
+}
+
+.secondary-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  .stat {
+    box-sizing: border-box;
+    background: $primary-color-red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    padding-top: 5%;
+    strong {
+      font-size: 0.8em;
+    }
+    &-number {
+      color: white;
+      font-size: 2em;
+    }
   }
 }

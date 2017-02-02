@@ -7,8 +7,8 @@
   height: 80vh;
   max-height: 800px;
   max-width: 1200px;
-  border: 10px solid #692828;
-  background-color: #fff;
+  border: 10px solid $border-color-brown;
+  background-color: $white;
   margin: auto;
   display: flex;
   position: absolute;
@@ -25,14 +25,23 @@
   flex-direction: column;
   width: 40%;
   height: 100%;
-  border-right: 10px solid #692828;
+  border-right: 10px solid $border-color-brown;
   background: url("./assets/images/divbg.png");
   background-position: center;
+  h3 {
+    font-size: 2em;
+    color: $white;
+    background-color: $border-color-brown;
+    padding: -1.5em 0 0 0em;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 game-stats {
-  background: $primary-color-red;
-  color: white;
+  background: url("./assets/images/divbg.png");
 }
 
 .instructions {
@@ -78,22 +87,82 @@ game-stats {
   height: 25%;
 }
 
-
 .new-game {
-  width: 50vw;
+  background-image: url("../assets/images/introSceneLightest.jpg");
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 60vw;
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: white;
   border: 10px solid black;
   transform: translate(-50%, -50%);
   z-index: 200;
-  text-align: center;
-  padding: 20px;
+  text-align: justify;
+  padding: 2em 3em 1.5em 3em;
   z-index: 100;
   box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.5);
-
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: $primary-color-brown;
+  text-shadow: 0px 0px 6px rgba($primary-color-yellow, 0.75);
+  h2 {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin:0;
+    padding:0;
+  }
+  p:first-of-type {
+    text-indent: 1em;
+  }
+  h5 {
+    font-family: $header-slab;
+    color: $primary-color-red;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    margin: 0 .5em .5em 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
+
+.startGameInput {
+  display: inline-block;
+  text-align: center;
+  height: 2.5em;
+  width: 100%;
+  input {
+    font-family: $header-slab;
+    text-transform: uppercase;
+    width: 50%;
+    height: 1.5em;
+    margin: 0 .5em 0 0;
+    padding: .5em;
+    color: $color-grey;
+  }
+  button {
+    width: 20%;
+    height: 2.75em;
+    background: $primary-color-red;
+    font-family: $header-slab;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    border: 2px solid darken($primary-color-red, 10%);
+    border-radius: 5px;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    &:hover {
+      background-color: lighten($primary-color-red, 20%);
+    }
+  }
+}
+
 
 .footer {
   position: fixed;

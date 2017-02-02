@@ -3,8 +3,8 @@
 <div class="wrapper">
   <div class="sidebar">
     <game-stats></game-stats>
+    <h3>Game Description</h3>
     <div class="instructions">
-      <h3>Game description</h3>
       <p>Haven is a resource management and survival game in the same vein as The Oregon Trail. The goal of the game is to reach Haven safely, before a horde of humanoid coyotes with a penchant for violence, and unquenchable bloodlust catches up to you. During your travels, you must manage your crystals (energy) and HP (health) to ensure you reach Haven. Along the way, you will be met by many encounters that affect your resources and travel plans.</p>
       <p>Your main actions are travel, gather, rest, or heal.<br><br>
       <strong>Travel moves you closer to Haven, but spends a day and 20 crystals.</strong><br><br>
@@ -41,6 +41,7 @@
 <div *ngIf="!isNewPlayer" class="new-game">
 
   <h2>Welcome to Haven</h2>
+<<<<<<< HEAD
   <p>After the establishment of New Arc, and the Exodus that followed, the Central  Wasteland erupted into chaos. Gangs of humans, and beast folk alike started attacking settlements for their own greedy purposes. Those were the the lucky towns, others were destroyed without mercy, without reason. Then came that one fateful night...</p>
 
   <p>By your determination to live, or perhaps sheer dumb luck, you survived the chaos that destroyed your home. As a new day dawns a traveler driving a beat up looking military transport passed through what was left of you home. Surprised to see anyone alive he stopped to greet you.</p>
@@ -51,11 +52,14 @@
 
   <p>“Haven is the last great city in the Central Wastes! Now gather what things your have left. We need to get moving. There is a horde of ‘Coyotes with weapons, insatiable bloodlust gathering to the west fifty miles from here, and we don’t want to draw their attention!</p>
 
-  <p><strong>Please enter your name:</strong></p>
+  <p>“Haven is the last great city in the Central 'Wastes'. Gather what things you have left. We need to get moving.”</p>
 
-  <input [(ngModel)]="name">
+  <h5><strong>Please enter your name:</strong></h5>
+  <div class="startGameInput">
+    <input [(ngModel)]="name">
 
-  <button (click)="startGame()">Start Game</button>
+    <button (click)="startGame()">Start Game</button>
+  </div>
 </div>
 
 
