@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   isNewPlayer: boolean = false;
 
   name: string = "";
+  musicPlaying: boolean = true;
 
   startGame() {
     if (this.name) {
@@ -33,4 +34,11 @@ export class AppComponent implements OnInit {
 
   outputArray: string[] = this.playerService.getPlayer().output;
 
+  toggleMusic() {
+    if (this.musicPlaying === true) {
+      this.musicPlaying = false;
+    } else {
+      this.musicPlaying = true;
+    }
+  }
 }

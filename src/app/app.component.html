@@ -7,13 +7,17 @@
   </div>
   <div class="main">
     <div class="output">
+
       <span [innerHTML]="(output)" class="output-string" *ngFor="let output of outputArray"></span>
     </div>
     <div class="actions">
       <travel></travel><gather></gather><rest></rest><heal></heal>
     </div>
+    <audio *ngIf="musicPlaying" src="../../assets/music/havenShort.mp3" autoplay></audio>
 
+    <img (click)="toggleMusic()" class="playbutton" src="../../assets/images/playbutton.png" alt="play music">
   </div>
+
 </div>
 
 <div *ngIf="!isNewPlayer" class="new-game">
@@ -43,7 +47,6 @@
 <monuments></monuments>
 
 <end-screen></end-screen>
-<game-intro></game-intro>
 
 <div class="footer">
 

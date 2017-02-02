@@ -65,6 +65,7 @@ game-stats {
   position: relative;
   transform: rotate(180deg);
   box-sizing: border-box;
+  overflow-x: hidden;
   &-string {
     margin: 10px 0;
     text-align: center;
@@ -222,5 +223,19 @@ game-stats {
     transform: none;
   }
 
+}
 
+.playbutton {
+  position: fixed;
+  height: 25px;
+  width: 25px;
+  top: 10px;
+  right: 10px;
+  transform: all 200ms linear;
+  background: white;
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
 }
