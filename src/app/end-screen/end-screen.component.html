@@ -1,17 +1,17 @@
 <div class="end-game-module" *ngIf="player.gameOver === 'died'">
   <h1>Game Over</h1>
-    <p>Your injuries were too great to heal. You will be missed.</p>
+    <p>The Journey to Haven is one frought with many dangers. Perhaps you had a deadly encounter with creatures such as the Horned-Riat or Ro-Quid. Or perhaps you died at the hands of bandits trying to steal your crystals. Hopefully you weren't done in by a tiny Rolling-Urchin.  May You Rest in Peace. </p>
     <button (click)="refresh()">New Game</button>
 </div>
 
 <div class="end-game-module" *ngIf="player.gameOver === 'time'">
   <h1>Game Over</h1>
-    <p>The horde of coyotes has caught up to you. You will be missed.</p>
+    <p>The next day dawns, you watch the sunrise rising in the east. Perhaps this is the day you reach Haven.  Your optmism vanishes the moment you see shapes starting to appear in the horizon. First one, the two, five, fiffteen, fifty too many to count, the horde had arrived.  You run into the transport telling the drivet to floor it. The engeine roars to life as the transport begins to speed away, one of you companions gets on the one mounted turrtet to repel any damned 'Coyote that came close. Within minutes you hear the sounds of the turret firing before falling silent, you go to pull her down from the turrent, only to find a hole in her chest.  You yell for someone to get on the gun, but your command is drowned out by the noise of the engine sputtering, until it too falls silent. In a horrific silence you realize that this was the end. Would you kneel down and wait for death, or would you die fighting? This was the only choice left for you to make.</p>
     <button (click)="refresh()">New Game</button>
 </div>
 
 <div class="end-game-module" *ngIf="player.gameOver === 'won'">
   <h1>Game Over</h1>
-    <p>You have reached Haven. It is everything you have imagined.</p>
+    <p>Overcoming the threats posed by wildlife, bandits, and everything else on this damned planet, you and your companions reach Haven.  Compared to the small settlement you once called home, you are overwhelmed by the sights. The outskirts covered in dweelings of stone and wood, but as you travel towards the city center the builds become made of steel, and stone. After passing through the city center you see something you have never seen before in your lifetime, the ocean. Haven was said to be a place of diversity, a place where one could start over, judging by all of the various Beast-Folk and humans simply going about thier lives, it seemed to be true.  </p>
     <button (click)="refresh()">New Game</button>
 </div>
