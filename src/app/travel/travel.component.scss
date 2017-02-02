@@ -9,6 +9,9 @@ svg {
   cursor: pointer;
   width: 90%;
   margin: 0;
+  * {
+    transition: all 200ms ease-in-out;
+  }
   &:hover {
     circle {
       fill: $primary-color-brown;

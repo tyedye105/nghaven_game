@@ -26,31 +26,35 @@
   width: 40%;
   height: 100%;
   border-right: 10px solid #692828;
+  background: url("./assets/images/divbg.png");
+  background-position: center;
 }
 
 game-stats {
+  background: $primary-color-red;
+  color: white;
 }
 
 .instructions {
-  background: $primary-color-yellow;
   overflow-y: auto;
   padding: 20px;
 }
 
 .main {
+  background: url("./assets/images/divbg.png");
+  background-position: center;
   width: 60%;
   height: 100%;
   overflow: hidden;
 }
 
 .output {
-  height: 80%;
-  border-top: 10px solid #692828;
+  height: 75%;
+  // border-top: 10px solid #692828;
   padding: 10px;
   position: relative;
   transform: rotate(180deg);
   box-sizing: border-box;
-  background: $primary-color-yellow;
   &-string {
     margin: 10px 0;
     text-align: center;
@@ -67,11 +71,11 @@ game-stats {
 }
 
 .actions {
-  background: #692828;
   display: flex;
-  justify-content: center;
+  padding-left: 30px;
+  justify-content: space-between;
   align-items: center;
-  height: 20%;
+  height: 25%;
 }
 
 
