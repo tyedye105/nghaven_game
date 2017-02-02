@@ -10,6 +10,9 @@ import { PlayerService } from '../player.service';
 })
 export class TravelComponent {
 
+
+
+
   constructor(public playerService: PlayerService) { }
 
   travelEvents(randomNumber) {
@@ -107,12 +110,11 @@ export class TravelComponent {
         this.playerService.getPlayer().hp = this.playerService.getPlayer().maxHp;
       };
 
-
-      var progressBar = document.getElementById('progress');
-
     } else {
       this.playerService.getPlayer().output.unshift("You don't have enough crystals to travel");
     }
   }
+
+
 
 }
