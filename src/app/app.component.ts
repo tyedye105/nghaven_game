@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   endGame: boolean = false;
   isNewPlayer: boolean = false;
 
-  name: string = "Adventurer";
+  name: string = "";
 
   startGame() {
     this.isNewPlayer = true;
